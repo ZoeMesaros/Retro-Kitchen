@@ -16,6 +16,7 @@ header {
   align-items: center;
   background-color: white;
   border-bottom: 4px solid rgb(253, 182, 253);
+  
   img {
     width: 35%;
     @include m.sm {
@@ -28,4 +29,20 @@ header {
       width: 12%;
     }
   }
+}
+
+.cart {
+position: absolute;
+left: 75%;
+top: 3.9%;
+color: rgb(87, 88, 88);
+}
+
+.cart-counter {
+    position: relative;
+width: 8px;
+height: 8px;
+transform: translateX(13px) translateY(-21px);
+background-color: rgb(250, 0, 0);
+border-radius: 50%;
 }
