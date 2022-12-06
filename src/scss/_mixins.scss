@@ -1,0 +1,17 @@
+@use "variables" as v;
+
+@mixin sm {
+  @media (min-width: map-get(v.$breakpoints, "sm")) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: map-get(v.$breakpoints, "md")) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: map-get(v.$breakpoints, "lg")) {
+    @content;
+  }
+}

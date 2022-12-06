@@ -1,0 +1,20 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+        img {
+            width: 35%;
+            @include m.sm{
+                width: 15%;
+            }
+            @include m.md{
+                width: 15%;
+            }
+            @include m.lg{
+            width: 12%;
+            }
+        }
+    }
