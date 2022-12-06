@@ -7,6 +7,8 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/scss/main.scss" />
     <script src="/src/ts/main.ts" defer></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    
   </head>
   <body>
     <header>
@@ -16,7 +18,20 @@
         alt="Retro Kitchen"
       />
     </header>
-    <nav></nav>
+    <!--Burger menu med submeny-->
+    <nav class="sidebar">
+      <div class="text">Side Menu</div>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Dashboard 2</a></li>
+        <ul>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Elements</a></li>
+
+        </ul>
+
+      </ul>
+    </nav>
     <main></main>
     <footer></footer>
   </body>
