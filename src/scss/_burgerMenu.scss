@@ -1,4 +1,24 @@
 @use "variables" as v;
 @use "mixins" as m;
-@use "homepage" as h;
 
+.menu {
+    //display: flex;
+    position: absolute;
+    top: 0; 
+    right: 0;
+    display: none;
+}
+
+/*#input-hamburger::checked {
+display: flex;
+}*/
+
+@include m.sm{
+    .hamburger{
+        width: 2em;
+        height: 0.25em;
+        display: block; 
+        background: var(--light);
+        position: relative;
+    }
+}

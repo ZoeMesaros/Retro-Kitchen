@@ -4,6 +4,7 @@
   @media (min-width: map-get(v.$breakpoints, "sm")) {
     @content;
   }
+  
 }
 @mixin md {
   @media (min-width: map-get(v.$breakpoints, "md")) {

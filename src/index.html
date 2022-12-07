@@ -7,31 +7,30 @@
     <title>Document</title>
     <link rel="stylesheet" href="/src/scss/main.scss" />
     <script src="/src/ts/main.ts" defer></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
     
   </head>
   <body>
     <header>
+      <!--Loggan för hemsidan-->
       <img
         class="retrologo"
         src="/src/images/retrokitchen.png"
         alt="Retro Kitchen"
       />
-    </header>
-    <!--Burger menu med submeny-->
-    <nav class="sidebar">
-      <div class="text">Side Menu</div>
-      <ul>
-        <li><a href="#">Dashboard</a></li>
-        <li><a href="#">Dashboard 2</a></li>
-        <ul>
-          <li><a href="#">Pages</a></li>
-          <li><a href="#">Elements</a></li>
-
+      <!--Burger menu med submeny-->
+      <nav class ="burgerMenu">
+        <label for="input-hamburger" class="hamburger"></label>
+        <input type="checkbox" id="input-hamburger"><!--hidden ska ligga efter det-->
+        <ul class="menu">
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Produkter</a></li>
+          <li><a href="#">Om oss</a></li>
+          <li><a href="#">Kassasida</a></li>
+          <li><a href="#">Kontakt</a></li>
         </ul>
-
-      </ul>
-    </nav>
+      </nav>
+    </header>
+  
     <main></main>
     <footer></footer>
   </body>
