@@ -39,10 +39,12 @@ header {
 }
 
 .cart-counter {
+  font-size: 9px;
+  color: white;
   position: relative;
-  width: 8px;
-  height: 8px;
-  transform: translateX(13px) translateY(-23px);
+  width: 15px;
+  height: 15px;
+  transform: translateX(20px) translateY(-30px);
   background-color: rgb(250, 0, 0);
   border-radius: 50%;
 }
