@@ -1,24 +1,104 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-.menu {
-    //display: flex;
-    position: absolute;
+.menu { //Innehållet i menyn (ser det båda i mobilt och dator)
+    
+    display: flex;
+    //flex-direction: row;
+    
     top: 0; 
     right: 0;
-    display: none;
+    //display: none;
+}
+.menu li a { 
+    display: block;
+    color: black;
+    font-size: 1.5rem;
+    padding: 1em 1em;
 }
 
-/*#input-hamburger::checked {
-display: flex;
-}*/
+//Stylning för Submenyerna
+.has-dropdown{
+    position: relative;
+}
 
-@include m.sm{
-    .hamburger{
-        width: 2em;
-        height: 0.25em;
-        display: block; 
-        background: var(--light);
-        position: relative;
+.submenu{
+    position: absolute;
+    left: 0;
+    background-color: darkgray;
+    white-space: nowrap;
+    padding: 1.2em 0;
+
+}
+.submenu > li > a {
+    padding: 0.9em 1.5em;
+} 
+
+.menu > li:hover > a, .submenu > li:hover > a{
+    background-color: rgba(0, 0%, 100%, 0.05);
+    color: red;
+}
+
+//Creating the arrow 
+
+.arrow{
+    width: 0.5em;
+    height: 0.5em;
+    display: inline-block;
+    vertical-align: middle;
+    border-left: 0.15em solid currentColor;
+    border-bottom: 0.15em solid currentColor;
+    transform: rotate();
+}
+
+//Hamburger menyn i mobilt läge 
+@include m.sm{ //Dubbelkolla om man ska nästla in mera!! få bort en del av koden 
+
+    .hamburger{ 
+       
+       width: 2em;
+       height: 0.25em;
+       display: block;
+       background: black;
+       position: absolute;
+       cursor: pointer;
+       transition: 0.2s transform ease-in-out;
+    }
+    .hamburger::after, .hamburger::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        background: inherit;
+        width: inherit;
+        height: inherit;
+        transition: 0.2s transform ease-in-out;
+    }
+   .hamburger::after{
+        top: 0.65em;
+    }
+   .hamburger::before{
+        bottom: 0.65em;
+   }
+   .close{ //När det blir ett X och menyn är öppen i mobil länge
+        transform: rotate(45deg);
+        transition: 0.2s transform ease-in-out;
+    }
+   .close::after{
+        transform: rotate(-90deg);
+    }
+    .close::before{
+        display: none;
+    }
+    .close::after, .close::before{
+        top: 0;
+        transition: 0.2s transform ease-in-out;
+    }
+    //Reveals menu when you see X
+    input[type="checkbox"]:checked + .menu{
+        position: absolute;
+        //flex-direction: column;
+        //display: flex; //Denna rad visar menyn 
+        opacity: 1;
+        transform: scaleY(1);
     }
 }

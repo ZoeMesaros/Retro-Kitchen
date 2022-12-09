@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Webshop Retro Kitchen</title>
     <link rel="stylesheet" href="/src/scss/main.scss" />
     <script src="/src/ts/main.ts" defer></script>
     
@@ -20,14 +20,28 @@
       <!--Burger menu med submeny-->
       <nav class ="burgerMenu">
         <label for="input-hamburger" class="hamburger"></label>
-        <input type="checkbox" id="input-hamburger"><!--hidden ska ligga efter det-->
+        <input type="checkbox" id="input-hamburger" hidden><!--hidden ska ligga efter det-->
+       <!--Här börjar menyvalen-->
         <ul class="menu">
           <li><a href="#">Hem</a></li>
-          <li><a href="#">Produkter</a></li>
+          <li class="has dropdown">
+            <a href="#">Produkter
+                <span class="arrow"></span>
+            </a>
+            <!--Submeny på produkter börjar-->
+            <ul class="submenu">
+              <li><a href="#" class="menu-link">Köksapparater</a></li>
+              <li><a href="#" class="menu-link">Vitvaror</a></li>
+              <li><a href="#" class="menu-link">Dinner möbler</a></li>
+            </ul>
+            <!--Här slutar Submeny på Produkter-->
+          </li>
+          <li><a href="#">REA</a></li>
           <li><a href="#">Om oss</a></li>
           <li><a href="#">Kassasida</a></li>
           <li><a href="#">Kontakt</a></li>
-        </ul>
+        </ul> 
+        <!--Här slutar menyvalen-->
       </nav>
     </header>
   
