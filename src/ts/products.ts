@@ -1,24 +1,32 @@
-class Item {
-    id: number;
-    name: string;
-    price: number;
-    desc: string;
-    color: string;
-    img: string;
-    selected: boolean;
-
-    constructor (id:number, name:string, price:number, desc:string, color:string, img:string, selected:boolean) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.desc = desc;
-        this.color = color;
-        this.img = img;
-        this.selected = selected;
-    }
-  }
-
-let storeItems = [
-new Item (1, "Ariete Kaffebryggare",  500, "Ariete Vintage kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.", "blue", "\src\images\Brands\Ariete\coffe\Ariete Vintage kaffebryggare (blå).png",false)
-  ];
+/* let shop = document.getElementById("shop") as HTMLInputElement;
+let basket = JSON.parse(localStorage.getItem("products-data")) || [] as HTMLInputElement;
   
+let generateShop = () => {
+    return (shop.innerHTML = storeItems
+      .map((x) => {
+        let { id, name, desc, img, price } = x;
+        let search = products-data.find((y) => y.id === id) || [];
+        return `
+      <div id=product-id-${id} class="item">
+        <img width="220" src=${img} alt="">
+        <div class="details">
+          <h3>${name}</h3>
+          <p>${desc}</p>
+          <div class="price-quantity">
+            <h2>$ ${price} </h2>
+            <div class="buttons">
+              <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
+              <div id=${id} class="quantity">${
+          search.item === undefined ? 0 : search.item
+        }</div>
+              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
+            </div>
+          </div>
+        </div>
+    </div>
+      `;
+      })
+      .join(""));
+  };
+  
+  generateShop(); */
