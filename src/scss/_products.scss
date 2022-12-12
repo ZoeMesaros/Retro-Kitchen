@@ -73,35 +73,6 @@ header {
   @include m.lg {
     grid-template-columns: repeat(4, 190);
   }
- /*  &__details {
-    display: flex;
-    flex-direction: column;
-    &__colors {
-      padding-top: 7px;
-      width: 16%;
-      display: flex;
-      gap: 4px;
-      justify-content: center;
-      align-items: center;
-      transform: translateX(5rem);
-      .color1,
-      .color2,
-      .color3 {
-        width: 50%;
-      }
-    }
-    &__title {
-      padding-top: 5px;
-      font-size: 12px;
-      text-align: center;
-    }
-    &__price {
-      line-height: 5px;
-      font-size: 12px;
-      text-align: center;
-      padding-bottom: 15px;
-    }
-  } */
 }
 
 
@@ -121,10 +92,18 @@ header {
   gap: 10px;
 }
 
-.colors {}
+.colors {
+  width: 20%;
+}
 
-.colors img {}
+.colors img {
+  width: 40%;
+}
 
-h3 {}
+h3 {
+  font-size: 60px;
+}
 
-h2 {}
+h2 {
+  font-size: 20px;
+}

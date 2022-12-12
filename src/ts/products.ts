@@ -1,3 +1,5 @@
+/* import { shopItemsData } from "./products-data"; */
+
 let shop = document.getElementById("shop") as HTMLDivElement;
 let modal = document.getElementById("myModal") as HTMLDivElement;
 
@@ -25,3 +27,4 @@ let loadProducts = () => {
 };
 
 loadProducts ();
+
