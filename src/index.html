@@ -7,42 +7,29 @@
     <title>Webshop Retro Kitchen</title>
     <link rel="stylesheet" href="/src/scss/main.scss" />
     <script src="/src/ts/main.ts" defer></script>
-    
+    <script src="https://kit.fontawesome.com/645d6d2449.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
       <!--Loggan för hemsidan-->
-      <img
+      <!--<img
         class="retrologo"
         src="/src/images/retrokitchen.png"
-        alt="Retro Kitchen"
-      />
-      <!--Burger menu med submeny-->
-      <nav class ="burgerMenu">
-        <label for="input-hamburger" class="hamburger"></label>
-        <input type="checkbox" id="input-hamburger" hidden><!--hidden ska ligga efter det-->
-       <!--Här börjar menyvalen-->
-        <ul class="menu">
-          <li><a href="#">Hem</a></li>
-          <li class="has dropdown">
-            <a href="#">Produkter
-                <span class="arrow"></span>
-            </a>
-            <!--Submeny på produkter börjar-->
-            <ul class="submenu">
-              <li><a href="#" class="menu-link">Köksapparater</a></li>
-              <li><a href="#" class="menu-link">Vitvaror</a></li>
-              <li><a href="#" class="menu-link">Dinner möbler</a></li>
-            </ul>
-            <!--Här slutar Submeny på Produkter-->
-          </li>
-          <li><a href="#">REA</a></li>
+        alt="Retro Kitchen"/>-->
+      <nav class="burgerMenu">
+        <label for="check" class="hamburger-btn">
+          <i class="fa-solid fa-bars"></i> <!--fas fa-bars -->
+        </label>
+        <input type="checkbox" id="check">
+        <ul class="burgerList">
+          <li><a class="active" href="#">Produkter</a></li>
+          <li><a href="#">Rea</a></li>
           <li><a href="#">Om oss</a></li>
-          <li><a href="#">Kassasida</a></li>
           <li><a href="#">Kontakt</a></li>
-        </ul> 
-        <!--Här slutar menyvalen-->
+          <li><a href="#">Kassa</a></li>
+        </ul>
       </nav>
+      
     </header>
   
     <main></main>
