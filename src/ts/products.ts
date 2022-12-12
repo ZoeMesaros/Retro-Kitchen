@@ -1,32 +1,27 @@
-/* let shop = document.getElementById("shop") as HTMLInputElement;
-let basket = JSON.parse(localStorage.getItem("products-data")) || [] as HTMLInputElement;
-  
-let generateShop = () => {
-    return (shop.innerHTML = storeItems
-      .map((x) => {
-        let { id, name, desc, img, price } = x;
-        let search = products-data.find((y) => y.id === id) || [];
-        return `
-      <div id=product-id-${id} class="item">
-        <img width="220" src=${img} alt="">
-        <div class="details">
-          <h3>${name}</h3>
-          <p>${desc}</p>
-          <div class="price-quantity">
-            <h2>$ ${price} </h2>
-            <div class="buttons">
-              <i onclick="decrement(${id})" class="bi bi-dash-lg"></i>
-              <div id=${id} class="quantity">${
-          search.item === undefined ? 0 : search.item
-        }</div>
-              <i onclick="increment(${id})" class="bi bi-plus-lg"></i>
-            </div>
-          </div>
+let shop = document.getElementById("shop") as HTMLDivElement;
+let modal = document.getElementById("myModal") as HTMLDivElement;
+
+let basket = JSON.parse(localStorage.getItem("data") || "[]");
+
+let openModal = () => {};
+
+let loadProducts = () => {
+  return (shop.innerHTML = shopItemsData
+    .map((x) => {
+      let { id, name, img, price, colors } = x;
+      let search = basket.find((y: { id: string; }) => y.id === id) || [];
+           return `
+    <div id=product-id-${id} class="item">
+      <img width="220" src=${img} alt="">
+      <div class="colors">
+      <img width="15" src=${colors} alt="">
         </div>
-    </div>
-      `;
-      })
-      .join(""));
-  };
-  
-  generateShop(); */
+        <h3>${name}</h3>
+          <h2>$ ${price} </h2>
+  </div>
+    `;
+    })
+    .join(""));
+};
+
+loadProducts ();
