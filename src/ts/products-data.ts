@@ -1,26 +1,24 @@
-class Item {
-    id: number;
-    name: string;
-    price: number;
-    desc: string;
-    color: string;
-    img: string;
-    selected: boolean;
-
-    constructor (id:number, name:string, price:number, desc:string, color:string, img:string, selected:boolean) {
-        this.id = id;
-        this.name = name;
-        this.price = price;
-        this.desc = desc;
-        this.color = color;
-        this.img = img;
-        this.selected = selected;
-    }
-  }
-
-let storeItems = [
-new Item (1, "Ariete Kaffebryggare",  500, "Ariete Vintage kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.", "blue", "\src\images\Brands\Ariete\coffe\Ariete Vintage kaffebryggare (blå).png",false),
-new Item (1, "Ariete Kaffebryggare",  500, "Ariete Vintage kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.", "blue", "\src\images\Brands\Ariete\coffe\Ariete Vintage kaffebryggare (blå).png",false),
-new Item (1, "Ariete Kaffebryggare",  500, "Ariete Vintage kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.", "blue", "\src\images\Brands\Ariete\coffe\Ariete Vintage kaffebryggare (blå).png",false),
-new Item (1, "Ariete Kaffebryggare",  500, "Ariete Vintage kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.", "blue", "\src\images\Brands\Ariete\coffe\Ariete Vintage kaffebryggare (blå).png",false)
+let shopItemsData = [
+  {
+    id: "ariete-coffee-blue",
+    name: "Ariette kaffebryggare",
+    price: 500,
+    desc: "Ariete kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.",
+    img: "src\images\brands\ariete\coffee\ariete-vintage-kaffebryggare-(bla).png",
+    colors: ["src\images\blue.png", "src\images\green.png", "src\images\beige.png" ]
+  },
+  {
+    id: "ariete-coffee-green",
+    name: "Ariete kaffebryggare",
+    price: 500,
+    desc: "Ariete kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.",
+    img: "src\images\brands\ariete\coffee\ariete-vintage-kaffebryggare-(gron).png",
+  },
+  {
+    id: "ariete-coffee-beige",
+    name: "Ariete kaffebryggare",
+    price: 500,
+    desc: "Ariete kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.",
+    img: "src\images\brands\ariete\coffee\ariete-vintage-kaffebryggare-(beige).png",
+  },
 ];

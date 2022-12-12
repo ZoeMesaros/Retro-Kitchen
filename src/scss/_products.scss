@@ -44,10 +44,13 @@ header {
     transform: translateX(13px) translateY(-23px);
     background-color: rgb(250, 0, 0);
     border-radius: 50%;
+    font-size: 5px;
+    font-weight:bold;
+    color: white;
   }
 }
 
-.products {
+.shop {
   padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 190);
@@ -70,7 +73,7 @@ header {
   @include m.lg {
     grid-template-columns: repeat(4, 190);
   }
-  &__details {
+ /*  &__details {
     display: flex;
     flex-direction: column;
     &__colors {
@@ -98,5 +101,30 @@ header {
       text-align: center;
       padding-bottom: 15px;
     }
-  }
+  } */
 }
+
+
+.item {
+  border: 2px solid #212529;
+  border-radius: 4px;
+}
+.item img {
+  width: 100%;
+  border-radius: 2px 2px 0 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.colors {}
+
+.colors img {}
+
+h3 {}
+
+h2 {}
