@@ -41,7 +41,8 @@
     display: block; 
     font-size: 30px;
     color: black;
-    align-items: center; //aldrig använda, flex istället
+    //align items fungerar ej just nu
+    align-items: center; //aldrig använda float, flex istället!!!
     line-height: 75px;
     margin-right: 40px;
 }
