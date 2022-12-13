@@ -10,9 +10,9 @@ let openModal = () => {};
 let loadProducts = () => {
   return (shop.innerHTML = shopItemsData
     .map((x) => {
-      let { id, name, img, price, colors } = x;
-      let search = basket.find((y: { id: string; }) => y.id === id) || [];
-           return `
+      let { id, img, colors, name, price } = x;
+      let search = basket.find((y: { id: string }) => y.id === id) || [];
+      return `
     <div id=product-id-${id} class="item">
       <img width="220" src=${img} alt="">
       <div class="colors">
@@ -26,5 +26,4 @@ let loadProducts = () => {
     .join(""));
 };
 
-loadProducts ();
-
+loadProducts();
