@@ -9,13 +9,9 @@ let openModal = () => {
   return (shop.innerHTML = shopItemsData
     .map((x) => {
       let { id, img, colors, name, price } = x;
-      let search = basket.find((y: { id: string }) => y.id === id) || [];
       return `
       <div id="myModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>text och beskrivning</p>
-    <div id=product-id-${id} class="item">
+      <div id=product-id-${id} class="item">
       <img width="220" src=${img} alt="">
       <div class="colors">
       <img width="15" src=${colors} alt="">
@@ -23,7 +19,8 @@ let openModal = () => {
         <h3>${name}</h3>
           <h2>$ ${price} </h2>
           </div>
-    </div>
+        <span class="close">&times;</span>
+        <p>text och beskrivning</p>
   </div>
     `;
     })
