@@ -96,22 +96,136 @@ const shopItemsData = [
     ]
   },
   {
-    id: "ariete-waterboiler-green",
-    name: "Ariete vattenkokare",
-    price: 450,
-    desc: "Ariete Vintage vattenkokare ger dig hög kapacitet på 1,7 liter, snabb uppvärmning, automatisk avstängning och enkel rengöring så du enkelt kan förbereda ditt kaffe eller te för dig och dina vänner.",
-    img: "src/images/brands/ariete/water-boiler/ariete-vattenkokare(gron).png",
+    id: "smeg-blender-pink",
+    name: "Smeg blender",
+    price: 2000,
+    desc: "Kraftfull blender i 50-talsstil från italienska Smeg. Kannan rymmer 1,5 liter och tål temperaturer upp till 70ºC. Välj mellan fyra olika hastigheter och program för iskross och smoothie. Soft Start-funktionen gör att blendern startar långsamt och sedan ökar hastigheten vilket ger en säker blandning utan något onödigt skvätt.",
+    img: "src/images/brands/smeg/blender/smeg-blender(rosa).png",
     colors: [    
+        "src/images/pink.png",
         "src/images/blue.png",
         "src/images/green.png",
-        "src/images/beige.png",],
+        "src/images/red.png",
+    ],
     colorTypes: [
-      { id: "ariete-waterboiler-blue", 
-      img: "src/images/brands/ariete/water-boiler/ariete-vattenkokare(bla).png" },
+      { id: "smeg-blender-blue",
+      img: "src/images/brands/smeg/blender/smeg-blender(bla).png" },
       {
-        id: "ariete-waterboiler-beige",
-        img: "src/images/brands/ariete/water-boiler/ariete-vattenkokare(beige).png",
+        id: "smeg-blender-green",
+        img: "src/images/brands/smeg/blender/smeg-blender(gron).png",
       },
+      {
+        id: "smeg-blender-red",
+        img: "src/images/brands/smeg/blender/smeg-blender(rod).png",
+      },
+    ]
+  },
+  {
+    id: "smeg-coffee-pink",
+    name: "Smeg kaffebryggare",
+    price: 2000,
+    desc: "Retroinspirerade 50's Style kaffebryggare från Smeg som blir en elegant touch i köket samtidigt som den ger dig ett riktigt gott kaffe! Kaffebryggare från Smeg kommer i många olika färgglada färger. Kaffemaskinen har en inbyggd smart timer där du kan du ställa in vilken tid du vill ha ditt nybryggda kaffe från Smeg. Ställ in timern och vakna till doften av nybryggt kaffe.",
+    img: "src/images/brands/smeg/coffee/smeg-kaffebryggare(pastellrosa).png",
+    colors: [
+        "src/images/pink.png",    
+        "src/images/blue.png",
+        "src/images/green.png",
+        "src/images/red.png",
+    ],
+    colorTypes: [
+      { id: "smeg-coffee-blue",
+      img: "src/images/brands/smeg/coffee/smeg-kaffebryggare(pastellbla).png" },
+      {
+        id: "smeg-coffee-green",
+        img: "src/images/brands/smeg/coffee/smeg-kaffebryggare(pastellgron).png",
+      },
+      {
+        id: "smeg-coffee-red",
+        img: "src/images/brands/smeg/coffee/smeg-kaffebryggare(rod).png",
+      },
+    ]
+  },
+  {
+    id: "smeg-espresso-pink",
+    name: "Smeg espressomaskin",
+    price: 3000,
+    desc: "Smeg espressomaskin har en elegant 50-talsinprirerad design. Rikligt snygg att ha framme på köksbänken. Förutom en snygg design gör Smeg espressomaskin också fantastiskt gott kaffe varje gång.",
+    img: "src/images/brands/smeg/espresso/smeg-manuell-espressomaskin(rosa).png",
+    colors: [
+        "src/images/pink.png",    
+        "src/images/blue.png",
+        "src/images/green.png",
+        "src/images/red.png",
+    ],
+    colorTypes: [
+      { id: "smeg-espresso-blue",
+      img: "src/images/brands/smeg/espresso/smeg-manuell-espressomaskin(bla).png" },
+      {
+        id: "smeg-blender-green",
+        img: "src/images/brands/smeg/espresso/smeg-manuell-espressomaskin(gron).png",
+      },
+      {
+        id: "smeg-coffee-red",
+        img: "src/images/brands/smeg/espresso/smeg-manuell-espressomaskin(rod).png",
+      },
+    ]
+  },
+  {
+    id: "smeg-fridge-combined-red",
+    name: "Smeg kylskåp kombinerat",
+    price: 15000,
+    desc: "Med Smeg 50 s Style kylskåp/frys kombiskåp FAB50RPG5 kan du addera stil och färg till ditt kök, samtidigt som du kan njuta av alla de teknologier du önskar från ett modernt kombiskåp. Det har justerbara hyllor, en låda för frukt och grönt, NoFrost-system och MultiAirFlow-kylning som tar väl hand om både färska och frysta matvaror.",
+    img: "src/images/brands/smeg/fridge/combined/smeg-kombinerad-kyl-&-frys(rod).png",
+    colors: [
+        "src/images/beige.png",    
+        "src/images/blue.png",
+        "src/images/green.png",
+        "src/images/red.png",
+    ],
+    colorTypes: [
+      { id: "smeg-fridge-combined-blue",
+      img: "src/images/brands/smeg/fridge/combined/smeg-kombinerad-kyl-&-frys(bla).png" },
+      {
+        id: "smeg-fridge-combined-creme",
+        img: "src/images/brands/smeg/fridge/combined/smeg-kombinerad-kyl-&-frys(creme).png",
+      },
+      {
+        id: "smeg-fridge-combined-green",
+        img: "src/images/brands/smeg/fridge/combined/smeg-kombinerad-kyl-&-frys(gron).png",
+      },
+    ]
+  },
+  {
+    id: "smeg-fridge-green",
+    name: "Smeg kylskåp",
+    price: 10000,
+    desc: "Smeg 50 s Style kylskåp med retrodesign tar inte mycket plats i köket men har ändå en rymlig 135 l-interiör och modern teknik som effektiv LED-belysning och ett enkelt avfrostningssystem. Denna modell är högergängad.",
+    img: "src/images/brands/smeg/fridge/small/smeg-fristaende-kylskap-gron.png",
+    colors: [   
+        "src/images/pink.png",
+        "src/images/blue.png",
+        "src/images/green.png", 
+    ],
+    colorTypes: [
+      { id: "smeg-fridge-pink",
+      img: "src/images/brands/smeg/fridge/small/smeg-fristaende-kylskap-rosa.png" },
+      {
+        id: "smeg-fridge-blue",
+        img: "src/images/brands/smeg/fridge/small/smeg-fristaende-kylskap-bla.png",
+      },
+      {
+        img: "src/images/brands/smeg/fridge/small/smeg-fristaende-kylskap-insida.png",
+      },
+    ]
+  },
+  {
+    id: "smeg-fridge-special",
+    name: "Smeg kylskåp Coca Cola",
+    price: 25000,
+    desc: "Lägg till en uppfriskande accent till ditt kök med ett retro Smeg-kylskåp, som kommer i ett elegant Enjoy a Coke-tema. Detta fristående kylskåp erbjuder en 244-liters volym med ett Multiflow-system för pålitlig långtidsförvaring av dina matvaror.",
+    img: "src/images/brands/smeg/fridge/smeg-fristaende-kylskap-special.png",
+    colors: [   
+        "src/images/red.png",
     ]
   },
 ];
