@@ -1,36 +1,42 @@
 @use "variables" as v;
 @use "mixins" as m;
 
-//Nästlingen i burgermenyn med Scss behövs göra!!!!
+
+
+//Namnet på navugeringsmenyn
 .burgerMenu{ 
     height: 75px;
-    width: 100%;
+    width: v.$primaryProcent;
     background: white;
     display: flex;
 }
 //Ul listan
 .burgerList{ 
     position: fixed;
-    width: 100%;
+    width: v.$primaryProcent;
     height: 0vh; //Denna var 100vh
     top: 75px;
     float: right;
     text-align: center;
     transition: all .5s;
+
+    //Stylning av li
+    li { 
+        opacity: 0;
+        line-height: 30px;
+        margin: 50px 0;
+        transition: all .5s;
+
+        //Stylning av innehållet i listan
+        a { 
+            color: v.$primaryColour;
+            font-size: 20px;
+            text-transform: uppercase;
+        }
+    }
 }
-//Stylning av li
-.burgerList li { 
-    opacity: 0;
-    line-height: 30px;
-    margin: 50px 0;
-    transition: all .5s;
-}
-//Stylning av innehållet i listan
-.burgerList li a { 
-    color: black; 
-    font-size: 20px;
-    text-transform: uppercase;
-}
+
+
 //Färgen på texten ändras när du är över den 
 .burgerList li a.active,.burgerList li a:hover{ 
     color: red;
@@ -40,7 +46,7 @@
 .hamburger-btn{ 
     display: block; 
     font-size: 30px;
-    color: black;
+    color: v.$primaryColour;
     //align items fungerar ej just nu
     align-items: center; //aldrig använda float, flex istället!!!
     line-height: 75px;
@@ -48,14 +54,14 @@
 }
 //När man ej tryckt på burger iconen alltså när den är stängd
 #check{ 
-    display: none;
+    display: none;   
 }
-//När man tryckt på burgericonen
-#check:checked + .burgerList{ 
+ //När man tryckt på burgericonen
+ #check:checked + .burgerList{ 
     height: 100vh; 
     background-color: #2A3B51;
 }
-//Innehållet i listan
-#check:checked + .burgerList li{ 
+  //Innehållet i listan
+  #check:checked + .burgerList li{ 
     opacity: 1;
 }
