@@ -11,7 +11,7 @@ for (let i = 0; i < shopItemsData.length; i++) {
   shopList.classList.add("shop")
   document.body.appendChild(shopList)
   let shopImg = document.createElement("img")
-  shopImg.innerHTML= `${shopItems.img}`
+  shopImg.src= `${shopItems.img}`
   document.body.appendChild(shopImg)
   let shopName = document.createElement("h3")
   shopName.innerHTML= `${shopItems.name}`
