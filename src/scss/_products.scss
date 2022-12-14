@@ -54,7 +54,7 @@ header {
   padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 190);
-  gap: 5px;
+  gap: 15px;
   justify-content: center;
   @include m.sm {
     padding-top: 40px;
