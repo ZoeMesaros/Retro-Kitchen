@@ -2,50 +2,36 @@
 
 let shop = document.getElementById("shop") as HTMLDivElement;
 let modal = document.getElementById("myModal") as HTMLDivElement;
+let modalBtn = document.getElementById("myBtn") as HTMLButtonElement;
+let closeModal = document.getElementsByClassName("close")[0] as HTMLSpanElement;
 
-let basket = JSON.parse(localStorage.getItem("data") || "[]");
+for (let i = 0; i < shopItemsData.length; i++) {
+  const shopItems = shopItemsData[i];
+  let shopList = document.createElement("div") as HTMLDivElement;
+  shopList.classList.add("shop")
+  document.body.appendChild(shopList)
+  let shopImg = document.createElement("img")
+  shopImg.= `${shopItems.img}`
+  document.body.appendChild(shopImg)
+  let shopName = document.createElement("h3")
+  shopName.innerHTML= `${shopItems.name}`
+  document.body.appendChild(shopName)
+  let shopPrice = document.createElement("h2")
+  shopPrice.innerHTML = `${shopItems.price} kr`
+  document.body.appendChild(shopPrice)
+  shopPrice.
 
+  shopList.appendChild(shopImg);
+  shopList.appendChild(shopName);
+  shopList.appendChild(shopPrice);
+  shop.appendChild(shopList)
+  /* shopList.addEventListener("click", openModal) */
+}
+/* 
 let openModal = () => {
-  return (shop.innerHTML = shopItemsData
-    .map((x) => {
-      let { id, img, colors, name, price } = x;
-      return `
-      <div id="myModal" class="modal">
-      <div id=product-id-${id} class="item">
-      <img width="220" src=${img} alt="">
-      <div class="colors">
-      <img width="15" src=${colors} alt="">
-        </div>
-        <h3>${name}</h3>
-          <h2>$ ${price} </h2>
-          </div>
-        <span class="close">&times;</span>
-        <p>text och beskrivning</p>
-  </div>
-    `;
-    })
-    .join(""));
-};
-
-let loadProducts = () => {
-  return (shop.innerHTML = shopItemsData
-    .map((x) => {
-      let { id, img, colors, name, price } = x;
-      let search = basket.find((y: { id: string }) => y.id === id) || [];
-      return `
-    <div id=product-id-${id} class="item">
-      <img width="220" src=${img} alt="">
-      <div class="colors">
-      <img width="15" src=${colors} alt="">
-        </div>
-        <h3>${name}</h3>
-          <h2>$ ${price} </h2>
-  </div>
-    `;
-    })
-    .join(""));
-};
-
-loadProducts();
-
-shop.addEventListener("click", openModal);
+  modalBtn.onclick =  function name {
+    
+  } {
+    
+  }
+} */
