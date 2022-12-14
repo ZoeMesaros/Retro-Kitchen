@@ -1,5 +1,6 @@
 @use "variables" as v;
 @use "mixins" as m;
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
 body { 
   min-height: 100vh;
@@ -12,10 +13,10 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   background-color: white;
   border-bottom: 4px solid rgb(253, 182, 253);
+
   img {
     width: 35%;
     @include m.sm {
@@ -28,4 +29,62 @@ header {
       width: 12%;
     }
   }
+}
+
+.cart {
+  position: absolute;
+  left: 75%;
+  top: 3.9%;
+  color: rgb(64, 66, 66);
+}
+
+.cart-counter {
+  font-size: 9px;
+  color: white;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  transform: translateX(20px) translateY(-30px);
+  background-color: rgb(250, 0, 0);
+  border-radius: 50%;
+}
+
+.sale {
+  color: rgb(253, 10, 10);
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.651);
+  font-size: 1.5rem;
+  font-family: "Kaushan Script", cursive;
+  text-align: center;
+  padding-top: 15px;
+}
+
+#star {
+  filter: invert(100%) drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.685));
+  width: 5%;
+  transform: translateX(7rem) translateY(-2rem);
+}
+
+#star2 {
+  filter: invert(100%) drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.685));
+  width: 5%;
+  transform: translateX(16rem) translateY(-2rem) scaleX(-1);
+}
+
+.carousel-feature {
+  position: absolute;
+  height: 30%;
+  transform: translateX(5%) translateY(-5%);
+  width: 90%;
+}
+
+#mistletoe {
+  position: relative;
+  width: 10%;
+  transform: translateX(22rem) translateY(-1.8rem);
+}
+
+#cane {
+  position: relative;
+  width: 10%;
+  transform: translateX(-2.5rem) translateY(-2rem) scaleX(-1);
 }
