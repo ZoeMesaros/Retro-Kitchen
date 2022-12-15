@@ -34,9 +34,15 @@ header {
 
 .cart {
   position: absolute;
-  left: 75%;
-  top: 3.9%;
+  left: 85%;
+  top: 3%;
   color: rgb(64, 66, 66);
+  @include m.md {
+    top: 4%;
+  }
+  @include m.lg {
+    top: 5%;
+  }
   &__counter {
     position: relative;
     width: 8px;
@@ -111,6 +117,7 @@ h2 {
 
 .modalBg {
   background-color: aqua;
+  display: flex;
   width: 50%;
   height: 100%;
 }
