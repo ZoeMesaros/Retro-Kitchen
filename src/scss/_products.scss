@@ -53,20 +53,13 @@ header {
 .shop {
   padding-top: 40px;
   display: grid;
-  grid-template-columns: repeat(2, 190);
+  grid-template-columns: repeat(1, 190);
   gap: 15px;
   justify-content: center;
-  @include m.sm {
-    padding-top: 40px;
-    display: grid;
-    grid-template-columns: repeat(2, 190);
-    gap: 10px;
-    justify-content: center;
-  }
   @include m.md {
     padding-top: 40px;
     display: grid;
-    grid-template-columns: repeat(3, 190);
+    grid-template-columns: repeat(2, 190);
     gap: 10px;
     justify-content: center;
   }
@@ -110,4 +103,14 @@ h2 {
 
 .modal {
   background-color: red;
+}
+
+.viewBtn {
+  border: 1px solid black;
+}
+
+.modalBg {
+  background-color: aqua;
+  width: 50%;
+  height: 100%;
 }
