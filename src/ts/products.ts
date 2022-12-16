@@ -4,7 +4,7 @@ let shop = document.getElementById("shop") as HTMLDivElement;
 let backdrop = document.getElementById("backdrop") as HTMLDivElement;
 let modalContent = document.getElementById("modal-content") as HTMLDivElement;
 
-function openModal() {
+function openModal(id:string) {
   for (let i = 0; i < shopItemsData.length; i++) {
     const modalItems = shopItemsData[i];
     let modalList = document.createElement("div") as HTMLDivElement;
@@ -31,7 +31,7 @@ for (let i = 0; i < shopItemsData.length; i++) {
   viewBtn.innerHTML = `Visa detaljer`;
   viewBtn.classList.add("viewBtn");
   document.body.appendChild(viewBtn);
-  viewBtn.addEventListener("click", openModal);
+  viewBtn.addEventListener("click", ()=> {openModal(shopItems.id)} );
 
   let shopImg = document.createElement("img");
   shopImg.src = `${shopItems.img}`;
