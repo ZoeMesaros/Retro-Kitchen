@@ -34,6 +34,7 @@ for (let i = 0; i < shopItemsData.length; i++) {
   viewBtn.addEventListener("click", openModal);
 
   let shopImg = document.createElement("img");
+  shopImg.classList.add("productImg"); //Stylning av bilderna
   shopImg.src = `${shopItems.img}`;
   document.body.appendChild(shopImg);
 
