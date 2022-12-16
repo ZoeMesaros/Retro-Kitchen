@@ -40,6 +40,7 @@ body {
   
   .cart {
     left: 10%;
+    top: 4px;
     display: inline;
     position: relative;
     color:#646464;
@@ -47,7 +48,6 @@ body {
       left: 25%;
     }
     @include m.lg {
-      background-color: red;
       left: 30%;
     }
     a:link {
@@ -60,13 +60,13 @@ body {
       position: absolute;
       font-size: 11px;
       font-weight: bolder;
-      transform: translateY(27.5px) translateX(12px);
-      color: rgb(247, 9, 9);
+      transform: translateY(30px) translateX(12px);
+      color: white;
       @include m.md {
-        transform: translateY(27px) translateX(12px);
+        transform: translateY(30px) translateX(12px);
       }
       @include m.lg {
-        transform: translateY(42px) translateX(12px);
+        transform: translateY(45px) translateX(12px);
       }
     }
   }
@@ -90,67 +90,65 @@ body {
      transform: translateY(145px);
      }
     }
-  
-  .wrapper {
-    @include m.md {
-   display: none;   
+    .wrapper {
+      @include m.md {
+     display: none;   
+      }
+      @include m.lg {
+        display: none;   
+         }
     }
-    @include m.lg {
-      display: none;   
-       }
-  }
-  
-  nav .m-menu__checkbox {
-    display: none;
-  }
-  nav label.m-menu__toggle {
-    cursor: pointer;
-    transform: translateX(600%) translateY(-60px);
-    margin-right: 75px;
-  }
-  nav .m-menu {
-    position: absolute;
-    top: 90;
-    left: 15;
-    max-width: 450px;
-    width: calc(70vw - 30px);
-    height: 70%;
-    -moz-transform: translate3d(-450px, 0, 0);
-    -o-transform: translate3d(-450px, 0, 0);
-    -ms-transform: translate3d(-450px, 0, 0);
-    -webkit-transform: translate3d(-450px, 0, 0);
-    transform: translate3d(-450px, 0, 0);
-    -moz-transition: transform 0.35s;
-    -o-transition: transform 0.35s;
-    -webkit-transition: transform 0.35s;
-    transition: transform 0.35s;
-    z-index: 1;
-    overflow: hidden;
-    background-color: #fff;
-  }
-  nav .m-menu__overlay {
-    background-color: rgba(103, 103, 103, 0.5);
-    position: absolute;
-    top: 0;
-    width: 100%;
-    bottom: 0;
-    z-index: 1;
-    display: none;
-  }
-  nav .m-menu__header {
-    padding: 0 16px;
-    height: 50px;
-    display: -ms-flexbox;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-justify-content: space-around;
-    justify-content: space-around;
-    -ms-flex-pack: space-around;
-    -webkit-align-items: center;
-    align-items: center;
-    border-bottom: 1px solid #e8e8e8;
-  }
+    
+    nav .m-menu__checkbox {
+      display: none;
+    }
+    nav label.m-menu__toggle {
+      cursor: pointer;
+      transform: translateX(170px) translateY(-55px);
+    }
+    nav .m-menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      max-width: 450px;
+      width: calc(70vw - 30px);
+      height: 70%;
+      -moz-transform: translate3d(-450px, 0, 0);
+      -o-transform: translate3d(-450px, 0, 0);
+      -ms-transform: translate3d(-450px, 0, 0);
+      -webkit-transform: translate3d(-450px, 0, 0);
+      transform: translate3d(-450px, 0, 0);
+      -moz-transition: transform 0.35s;
+      -o-transition: transform 0.35s;
+      -webkit-transition: transform 0.35s;
+      transition: transform 0.35s;
+      z-index: 1;
+      overflow: hidden;
+      background-color: #fff;
+    }
+    nav .m-menu__overlay {
+      background-color: rgba(103, 103, 103, 0.5);
+      position: absolute;
+      top: 0;
+      width: 100%;
+      bottom: 0;
+      z-index: 1;
+      display: none;
+    }
+    nav .m-menu__header {
+      padding: 0 16px;
+      height: 50px;
+      display: -ms-flexbox;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-justify-content: space-around;
+      justify-content: space-around;
+      -ms-flex-pack: space-around;
+      -webkit-align-items: center;
+      align-items: center;
+      border-bottom: 1px solid #e8e8e8;
+    }
   nav .m-menu__header span {
     font-size: 1.2rem;
     font-weight: bold;
@@ -222,7 +220,7 @@ body {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
-  
+
   
   .product-header {
     font-family: 'Sora', sans-serif;
