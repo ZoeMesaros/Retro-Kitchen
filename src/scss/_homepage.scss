@@ -18,18 +18,18 @@ header {
   background-color: #ffffff;
   border-bottom: 4px solid #fdb6fd;
 @include m.md {
-  height: 102;
+  height: 102px;
 }
 @include m.lg {
-  height: 150;
+  height: 150px;
 }
   img {
-    width: 30%;
+    width: 140px;
     @include m.sm {
-      width: 15%;
+      width: 140px;
     }
     @include m.md {
-      width: 15%;
+      width: 140px;
     }
     @include m.lg {
       width: 190px;
