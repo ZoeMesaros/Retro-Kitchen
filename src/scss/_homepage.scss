@@ -32,7 +32,7 @@ header {
       width: 15%;
     }
     @include m.lg {
-      width: 12%;
+      width: 190px;
     }
   }
 }
@@ -42,6 +42,12 @@ header {
   left: 72%;
   top: 3%;
   color: rgb(64, 66, 66);
+  @include m.md {
+    top: 40px;
+  }
+  @include m.lg {
+    top: 70px;
+  }
 }
 
 .cart-counter {
