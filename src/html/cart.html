@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Retro Kitchen</title>
     <link rel="stylesheet" href="/src/scss/_cart.scss" />
-    <script src="/src/ts/cart.ts" defer></script>
-    <script src="/src/ts/products-data.ts" defer></script>
+    <script src="/src/ts/main.ts" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet"> 
     <script
       src="https://kit.fontawesome.com/b3674b136c.js"
       crossorigin="anonymous"
@@ -42,22 +44,67 @@
   </head>
   <body>
     <header>
+      <nav class="main-nav">
+      </nav>
       <img
         class="retrologo"
         src="/src/images/retrokitchen.png"
         alt="Retro Kitchen"
       />
-      <a href="/src/images/beige.png">
-        <div class="cart">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <div class="cart__counter">0</div>
+    <section class="cart"><a href="/src/html/cart.html"><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
+    <section class="cart-counter">0</section>
+</section>
+<section>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
+      <label class="m-menu__toggle" for="menu">
+        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </label>
+      <label class="m-menu__overlay" for="menu"></label>
+    
+      <div class="m-menu">
+        <div class="m-menu__header">
+          <label class="m-menu__toggle" for="menu">
+            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </label>
+          <span class="product-header">Produkter</span>
         </div>
-      </a>
-    </header>
-    <nav></nav>
-    <main>
-      <div id="label" class="text-center"></div>
-      <div class="shopping-cart" id="shopping-cart"></div>
+        <ul>
+          <ul>
+            <a href="/src/html/products.html"><li><label id="product-text">Alla produkter</label></li></a>
+             <li>
+            <label class="a-label__chevron" for="item-2">Köksapparater</label>
+            <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
+            <div class="m-menu">
+              <div class="m-menu__header">
+                <label class="m-menu__toggle" for="item-2">
+                  <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
+                    <path d="M19 12H6M12 5l-7 7 7 7"/>
+                  </svg>
+                </label>
+                <span id="product-text">Köksapparater</span>
+              </div>
+              <ul>
+                <li><label>Kaffe/Espresso</label></li>
+                <li><label>Brödrostar</label></li>
+                <li><label>Vattenkokare</label>
+                <li><label>Köksassistenter</label>
+                <li><label>Blenders</label>
+              </div>
+          </li>
+          <li><label id="product-text">Vitvaror</label></li>
+          <li><label id="product-text">REA</label></li>
+          <a href="/src/html/about.html"><li><label id="product-text">Om oss</label></li></a>
+          <a href="/src/html/contact.html"><li><label id="product-text">Kontakt</label></li></a>
+        </ul>  
+      </div>
+    </nav>
+  </div>
+</section>
     </main>
     <footer></footer>
   </body>
