@@ -39,29 +39,40 @@ body {
   }
   
   .cart {
-    position: absolute;
-    left: 72%;
-    top: 3.5%;
-    color: rgb(64, 66, 66);
+    left: 10%;
+    display: inline;
+    position: relative;
+    color:#646464;
     @include m.md {
-      top: 40px;
+      left: 25%;
     }
     @include m.lg {
-      top: 70px;
+      background-color: red;
+      left: 30%;
+    }
+    a:link {
+      color: #646464;
+    }
+    a:visited {
+      color: #646464;
+    }
+     &__counter {
+      position: absolute;
+      font-size: 11px;
+      font-weight: bolder;
+      transform: translateY(27.5px) translateX(12px);
+      color: rgb(247, 9, 9);
+      @include m.md {
+        transform: translateY(27px) translateX(12px);
+      }
+      @include m.lg {
+        transform: translateY(42px) translateX(12px);
+      }
     }
   }
   
-  .cart-counter {
-    font-size: 9px;
-    color: white;
-    position: relative;
-    width: 15px;
-    height: 15px;
-    transform: translateX(20px) translateY(-30px);
-    background-color: rgb(250, 0, 0);
-    border-radius: 50%;
-  }
-  
+
+
   .main-nav {
     display: none;
      @include m.md {
@@ -94,12 +105,13 @@ body {
   }
   nav label.m-menu__toggle {
     cursor: pointer;
-    transform: translateX(165px) translateY(-55px);
+    transform: translateX(600%) translateY(-60px);
+    margin-right: 75px;
   }
   nav .m-menu {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 90;
+    left: 15;
     max-width: 450px;
     width: calc(70vw - 30px);
     height: 70%;
