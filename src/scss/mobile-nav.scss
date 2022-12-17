@@ -1,6 +1,5 @@
 @use "variables" as v;
 @use "mixins" as m;
-@use "reset";
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
 body { 
@@ -60,10 +59,10 @@ body {
       position: absolute;
       font-size: 11px;
       font-weight: bolder;
-      transform: translateY(30px) translateX(12px);
+      transform: translateY(31px) translateX(12px);
       color: white;
       @include m.md {
-        transform: translateY(30px) translateX(12px);
+        transform: translateY(31px) translateX(12px);
       }
       @include m.lg {
         transform: translateY(45px) translateX(12px);
@@ -71,8 +70,6 @@ body {
     }
   }
   
-
-
   .main-nav {
     display: none;
      @include m.md {
@@ -112,7 +109,7 @@ body {
       left: 0;
       max-width: 450px;
       width: calc(70vw - 30px);
-      height: 70%;
+      height: 60%;
       -moz-transform: translate3d(-450px, 0, 0);
       -o-transform: translate3d(-450px, 0, 0);
       -ms-transform: translate3d(-450px, 0, 0);
