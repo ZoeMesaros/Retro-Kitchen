@@ -44,8 +44,6 @@
   </head>
   <body>
     <header>
-      <nav class="main-nav">
-      </nav>
       <img
         class="retrologo"
         src="/src/images/retrokitchen.png"
@@ -54,9 +52,33 @@
       
     <section class="cart"><a href="/src/html/cart.html"><span class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
 </section>
-<!-- <section class="cart__counter">0</section> -->
-<section>
-  <div class="wrapper">
+<nav role='navigation'>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="/src/html/products.html">
+        <li>Alla produkter</li>
+      </a>
+      <a href="/src/html/products.html">
+        <li>Köksmaskiner</li>
+      </a>
+      <a href="/src/html/products.html">
+        <li>Vitvaror</li>
+      </a>
+      <a href="/src/html/about.html">
+        <li>Om oss</li>
+      </a>
+      <a href="/src/html/contact.html">
+        <li>Kontakt</li>
+      </a>
+    </ul>
+  </div>
+</nav>
+ 
+ <!--  <div class="wrapper">
     <nav>
       <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
       <label class="m-menu__toggle" for="menu">
@@ -104,7 +126,7 @@
         </ul>  
       </div>
     </nav>
-  </div>
+  </div> -->
 </section>
     </header>
     <h2 class="sale">Mellandagsrea
