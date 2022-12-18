@@ -12,31 +12,3 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
   }
-  
-  header {
-    height: 90px;
-    display: flex;
-    text-align: center;
-    background-color: #ffffff;
-    border-bottom: 4px solid #fdb6fd;
-  @include m.md {
-    height: 102px;
-  }
-  @include m.lg {
-    height: 150px;
-  }
-    img {
-      width: 140px;
-      @include m.sm {
-        width: 140px;
-      }
-      @include m.md {
-        transform: translateY(-50px);
-        width: 140px;
-      }
-      @include m.lg {
-        transform: translateY(-30px);
-        width: 170px;
-      }
-    }
-  }
