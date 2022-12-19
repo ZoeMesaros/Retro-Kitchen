@@ -2,17 +2,37 @@
 
 let shop = document.getElementById("shop") as HTMLDivElement;
 
+/* function closeWindow(id: string) {
+  closeModal.style.display = "none"
+} */
+
 function openModal(id: string) {
   for (let i = 0; i < shopItemsData.length; i++) {
     const modalItems = shopItemsData[i];
+    if (modalItems.id !== id) {
+      continue
+    }
     let modalList = document.createElement("div") as HTMLDivElement;
     modalList.classList.add("modalBg");
     document.body.appendChild(modalList);
+
+    modalList.style.display= "block";
+
+    let closeModal = document.createElement("span") as HTMLSpanElement;
+    closeModal.classList.add("close"[0]);
+    closeModal.innerHTML= `&times`
+/*     closeModal.addEventListener("click", closeWindow) */
+    document.body.appendChild(closeModal);
 
     let header = document.createElement("h1");
     header.classList.add("header");
     header.innerHTML = `${modalItems.name}`;
     document.body.appendChild(header);
+
+  /*   let colorForm = document.createElement("option") as HTMLOptionElement;
+    colorForm.classList.add("colorForm");
+    colorForm.innerHTML = `${modalItems.name}`;
+    document.body.appendChild(colorForm); */
 
     let descContainer = document.createElement("div") as HTMLDivElement;
     descContainer.classList.add("descContainer");
@@ -23,9 +43,11 @@ function openModal(id: string) {
     modalImg.classList.add("modalImg");
     modalImg.src = `${modalItems.img}`;
 
+/*     modalList.appendChild(colorForm); */
     modalList.appendChild(modalImg);
     modalList.appendChild(descContainer);
     modalList.appendChild(header);
+    modalList.appendChild(closeModal);
     shop.appendChild(modalList);
   }
 }
@@ -44,14 +66,18 @@ for (let i = 0; i < shopItemsData.length; i++) {
   shopImg.src = `${shopItems.img}`;
   document.body.appendChild(shopImg);
 
-  let colors = document.createElement("img") as HTMLImageElement;
-  colors.classList.add("colors");
-  colors.src = `${shopItems.colors}`;
-  document.body.appendChild(colors);
+  for (let i = 0; i < shopItems.colors.length; i++) {
+    const element = shopItems.colors[i];
+    let colors = document.createElement("img") as HTMLImageElement;
+    colors.classList.add("colors");
+    colors.src = `${element}`;
+    /* document.body.appendChild(colors); */
+    shopList.appendChild(colors);
+  }
 
-  /*   let imgChoice = document.createElement("div") as HTMLDivElement;
+    let imgChoice = document.createElement("div") as HTMLDivElement;
   imgChoice.classList.add("colorChoice"); //Stylning av bilderna
-  document.body.appendChild(imgChoice); */
+  document.body.appendChild(imgChoice);
 
   let shopName = document.createElement("h3");
   shopName.innerHTML = `${shopItems.name}`;
@@ -62,9 +88,7 @@ for (let i = 0; i < shopItemsData.length; i++) {
   document.body.appendChild(shopPrice);
 
   shopList.appendChild(shopImg);
-  shopList.appendChild(colors);
-  /*   imgChoice.appendChild(colors);
-  shopList.appendChild(imgChoice); */
+  shopList.appendChild(imgChoice);
   shopList.appendChild(shopName);
   shopList.appendChild(shopPrice);
   shop.appendChild(shopList);
