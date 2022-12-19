@@ -62,22 +62,21 @@ for (let i = 0; i < shopItemsData.length; i++) {
   document.body.appendChild(shopList);
 
   let shopImg = document.createElement("img") as HTMLImageElement;
-  shopImg.classList.add("productImg"); //Stylning av bilderna
+  shopImg.classList.add("productImg");
   shopImg.src = `${shopItems.img}`;
   document.body.appendChild(shopImg);
+
+  let imgChoice = document.createElement("div") as HTMLDivElement;
+  imgChoice.classList.add("colorChoice");
+  document.body.appendChild(imgChoice);
 
   for (let i = 0; i < shopItems.colors.length; i++) {
     const element = shopItems.colors[i];
     let colors = document.createElement("img") as HTMLImageElement;
     colors.classList.add("colors");
     colors.src = `${element}`;
-    /* document.body.appendChild(colors); */
-    shopList.appendChild(colors);
+    imgChoice.appendChild(colors);
   }
-
-    let imgChoice = document.createElement("div") as HTMLDivElement;
-  imgChoice.classList.add("colorChoice"); //Stylning av bilderna
-  document.body.appendChild(imgChoice);
 
   let shopName = document.createElement("h3");
   shopName.innerHTML = `${shopItems.name}`;
@@ -92,13 +91,4 @@ for (let i = 0; i < shopItemsData.length; i++) {
   shopList.appendChild(shopName);
   shopList.appendChild(shopPrice);
   shop.appendChild(shopList);
-  /* shopList.addEventListener("click", openModal) */
 }
-/* 
-let openModal = () => {
-  modalBtn.onclick =  function name {
-    
-  } {
-    
-  }
-} */

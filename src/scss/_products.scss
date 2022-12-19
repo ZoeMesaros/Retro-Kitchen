@@ -48,7 +48,7 @@
     grid-template-columns: repeat(3, 30%);
   }
   @include m.lg {
-  grid-template-columns: repeat(5, 13%);
+  grid-template-columns: repeat(4fr, 15%);
   }
 }
 
@@ -62,8 +62,8 @@ text-align: center;
   text-align: center;
   }
 
-.shoplist {
-
+.product-card {
+  height: 100%;
 }
 
 .productImg {
@@ -78,7 +78,7 @@ text-align: center;
   }
   @include m.lg {
   padding: 30%;
-  width: 150%;
+  width: 200%;
   }
 }
 
@@ -90,11 +90,16 @@ text-align: center;
   height: 15px;
 } */
 
+.colorChoice {
+  text-align: center;
+}
+
 .colors {
+  margin: 2px;
   border: 1.5px solid black;
   border-radius: 50%;
-  transform: translateX(50%);
-  justify-content: center;
+/*   transform: translateX(50%);
+  justify-content: center; */
   width: 20px;
   height: 20px;
 }
