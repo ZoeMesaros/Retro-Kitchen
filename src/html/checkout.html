@@ -44,8 +44,6 @@
   </head>
   <body>
     <header>
-      <nav class="main-nav">
-      </nav>
       <img
         class="retrologo"
         src="/src/images/retrokitchen.png"
@@ -54,58 +52,43 @@
       
     <section class="cart"><a href="/src/html/cart.html"><span class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i></a>
 </section>
-<section>
-  <div class="wrapper">
-    <nav>
-      <input type="checkbox" id="menu" name="menu" class="m-menu__checkbox">
-      <label class="m-menu__toggle" for="menu">
-        <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
-      </label>
-      <label class="m-menu__overlay" for="menu"></label>
-    
-      <div class="m-menu">
-        <div class="m-menu__header">
-          <label class="m-menu__toggle" for="menu">
-            <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-              <line x1="18" y1="6" x2="6" y2="18"></line>
-              <line x1="6" y1="6" x2="18" y2="18"></line>
-            </svg>
-          </label>
-          <span class="product-header">Produkter</span>
-        </div>
-        <ul>
-          <ul>
-            <a href="/src/html/products.html"><li><label id="product-text">Alla produkter</label></li></a>
-             <li>
-            <label class="a-label__chevron" for="item-2">Köksapparater</label>
-            <input type="checkbox" id="item-2" name="item-2" class="m-menu__checkbox">
-            <div class="m-menu">
-              <div class="m-menu__header">
-                <label class="m-menu__toggle" for="item-2">
-                  <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#000000" stroke-width="2" stroke-linecap="butt" stroke-linejoin="arcs">
-                    <path d="M19 12H6M12 5l-7 7 7 7"/>
-                  </svg>
-                </label>
-                <span id="product-text">Köksapparater</span>
-              </div>
-              <ul>
-                <li><label>Kaffe/Espresso</label></li>
-                <li><label>Brödrostar</label></li>
-                <li><label>Vattenkokare</label>
-                <li><label>Köksassistenter</label>
-                <li><label>Blenders</label>
-              </div>
-          </li>
-          <li><label id="product-text">Vitvaror</label></li>
-          <li><label id="product-text">REA</label></li>
-          <a href="/src/html/about.html"><li><label id="product-text">Om oss</label></li></a>
-          <a href="/src/html/contact.html"><li><label id="product-text">Kontakt</label></li></a>
-        </ul>  
-      </div>
-    </nav>
+<!-- //*Mobile*\\ -->
+<nav role='navigation'>
+  <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+    <ul id="menu">
+      <a href="/src/html/products.html">
+        <li>Alla produkter</li>
+      </a>
+      <a href="/src/html/products.html">
+        <li>Köksmaskiner</li>
+      </a>
+      <a href="/src/html/products.html">
+        <li>Vitvaror</li>
+      </a>
+      <a href="/src/html/about.html">
+        <li>Om oss</li>
+      </a>
+      <a href="/src/html/contact.html">
+        <li>Kontakt</li>
+      </a>
+    </ul>
   </div>
-</section>
-    </main>
+</nav>
+<!-- //*Desktop*\\ -->
+<nav class="desktop">
+  <ul class="desktop__list">
+    <li><a href="/src/index.html">Start</a></li>
+    <li><a href="/src/index.html">Nyheter</a></li>
+    <li><a href="/src/html/products.html">Sortiment</a></li>
+    <li><a href="/src/html/about.html">Om oss</a></li>
+    <li><a href="/src/html/contact.html">Kontakt</a></li>
+  </ul>
+</nav>
+    </header>
     <footer></footer>
   </body>
 </html>
