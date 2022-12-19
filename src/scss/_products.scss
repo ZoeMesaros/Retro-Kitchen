@@ -32,6 +32,7 @@
 }
 
 .shop {
+  position: absolute;
   width: 100%;
   height: 100vh;
   display: grid;
@@ -82,17 +83,74 @@ text-align: center;
   }
 }
 
-.colorChoice {
+/* .colorChoice {
+  display: flex;
+  justify-content: center;
   background-color: orange;
-  width: 90%;
-  height: 50px;
-}
+  width: 50%;
+  height: 15px;
+} */
 
 .colors {
-  width: 80%;
-  height: 50%;
+  border: 1.5px solid black;
+  border-radius: 50%;
+  transform: translateX(50%);
+  justify-content: center;
+  width: 9%;
+  height: 5%;
 }
 
 .viewBtn {
   display: none;
+}
+
+.modalBg {
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  border: 2px double grey;
+  transform: translateY(25%);
+  @include m.sm {
+    background-color: rgb(105, 25, 211);
+    border: 2px double grey;
+transform: translateY(15%);
+  }
+  @include m.md {
+    background-color: rgb(8, 252, 179);
+    border: 2px double grey;
+    transform: translateY(15%) translateX(12%);
+    height: 70%;
+    width: 80%;
+  }
+  @include m.lg {
+    background-color: orange;
+    border: 2px double grey;
+    transform: translateY(7%) translateX(15%);
+    height: 70%;
+    width: 80%;
+  }
+}
+
+.modalImg {
+  max-width: 50%;
+  transform: translateX(5%) translateY(5%);
+}
+
+.header {
+  position: absolute;
+  font-size: 20px;
+  left: 62%;
+  top: 5%;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 2rem;
+}
+
+.descContainer {
+  position: fixed;
+  left: 800px;
+  bottom: 200px;
+  background-color: #fdb6fd;
+  width: 200px;
+  height: 300px;
 }

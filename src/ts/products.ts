@@ -1,36 +1,43 @@
 /* import { shopItemsData } from "./products-data"; */
-let modal = document.getElementById("modal") as HTMLDivElement;
-let shop = document.getElementById("shop") as HTMLDivElement;
-let backdrop = document.getElementById("backdrop") as HTMLDivElement;
-let modalContent = document.getElementById("modal-content") as HTMLDivElement;
 
-function openModal(id:string) {
+let shop = document.getElementById("shop") as HTMLDivElement;
+
+function openModal(id: string) {
   for (let i = 0; i < shopItemsData.length; i++) {
     const modalItems = shopItemsData[i];
     let modalList = document.createElement("div") as HTMLDivElement;
     modalList.classList.add("modalBg");
     document.body.appendChild(modalList);
-    modalContent.classList.add("modal-content-show");
-    let modalImg = document.createElement("img");
-    modalImg.classList.add("modalImg");
-    modalImg.src= `${modalItems.img}`
-    document.body.appendChild(modalImg);
 
-    modalList.appendChild(modalImg)
-    modal.appendChild(modalList);
+    let header = document.createElement("h1");
+    header.classList.add("header");
+    header.innerHTML = `${modalItems.name}`;
+    document.body.appendChild(header);
+
+    let descContainer = document.createElement("div") as HTMLDivElement;
+    descContainer.classList.add("descContainer");
+    descContainer.innerHTML = `${modalItems.desc}`;
+    document.body.appendChild(descContainer);
+
+    let modalImg = document.createElement("img") as HTMLImageElement;
+    modalImg.classList.add("modalImg");
+    modalImg.src = `${modalItems.img}`;
+
+    modalList.appendChild(modalImg);
+    modalList.appendChild(descContainer);
+    modalList.appendChild(header);
+    shop.appendChild(modalList);
   }
 }
 
 for (let i = 0; i < shopItemsData.length; i++) {
   const shopItems = shopItemsData[i];
   let shopList = document.createElement("div") as HTMLDivElement;
-   document.body.appendChild(shopList);
-
-  let viewBtn = document.createElement("button") as HTMLButtonElement;
-  viewBtn.innerHTML = `Visa detaljer`;
-  viewBtn.classList.add("viewBtn");
-  document.body.appendChild(viewBtn);
-  viewBtn.addEventListener("click", ()=> {openModal(shopItems.id)} );
+  shopList.classList.add("product-card");
+  shopList.addEventListener("click", () => {
+    openModal(shopItems.id);
+  });
+  document.body.appendChild(shopList);
 
   let shopImg = document.createElement("img") as HTMLImageElement;
   shopImg.classList.add("productImg"); //Stylning av bilderna
@@ -42,9 +49,9 @@ for (let i = 0; i < shopItemsData.length; i++) {
   colors.src = `${shopItems.colors}`;
   document.body.appendChild(colors);
 
-  let imgChoice = document.createElement("div") as HTMLDivElement;
+  /*   let imgChoice = document.createElement("div") as HTMLDivElement;
   imgChoice.classList.add("colorChoice"); //Stylning av bilderna
-  document.body.appendChild(imgChoice);
+  document.body.appendChild(imgChoice); */
 
   let shopName = document.createElement("h3");
   shopName.innerHTML = `${shopItems.name}`;
@@ -54,10 +61,10 @@ for (let i = 0; i < shopItemsData.length; i++) {
   shopPrice.innerHTML = `${shopItems.price} kr`;
   document.body.appendChild(shopPrice);
 
-  shopList.appendChild(viewBtn);
   shopList.appendChild(shopImg);
-  imgChoice.appendChild(colors);
-  shopList.appendChild(imgChoice);
+  shopList.appendChild(colors);
+  /*   imgChoice.appendChild(colors);
+  shopList.appendChild(imgChoice); */
   shopList.appendChild(shopName);
   shopList.appendChild(shopPrice);
   shop.appendChild(shopList);

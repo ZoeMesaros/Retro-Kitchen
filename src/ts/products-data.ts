@@ -7,6 +7,16 @@ interface shopItemsData {
   colors: string;
 }
 
+const imgchoice = [
+  {
+    blue: "/blue.png",
+    green: "/green.png",
+    beige: "/beige",
+    pink: "/pink",
+    red: "/red",
+  }
+]
+
 const shopItemsData = [
     {
     id: "ariete-coffee-blue",
