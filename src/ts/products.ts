@@ -2,9 +2,6 @@
 
 let shop = document.getElementById("shop") as HTMLDivElement;
 
-/* function closeModalWindow {
-  modalList.style.display = "none"
-} */
 
 function openModal(id: string) {
   for (let i = 0; i < shopItemsData.length; i++) {
@@ -16,11 +13,17 @@ function openModal(id: string) {
     modalList.classList.add("modalBg");
     document.body.appendChild(modalList);
 
+    modalList.style.display = "block";
+
+    function ModalCloseFunction () {
+      modalList.style.display = "none";
+    }
 
     let closeModal = document.createElement("span") as HTMLSpanElement;
     closeModal.classList.add("close"[0]);
     closeModal.innerHTML= `&times`
     document.body.appendChild(closeModal);
+    closeModal.addEventListener("click", ModalCloseFunction)
 
     let header = document.createElement("h1");
     header.classList.add("header");
