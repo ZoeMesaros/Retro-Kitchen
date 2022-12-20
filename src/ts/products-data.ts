@@ -180,6 +180,61 @@ const shopItemsData = [
     ]
   },
   {
+    id: "smeg-kitchen-assistant-blue",
+    name: "Smeg köksmaskin",
+    price: 4000,
+    desc: "Stabil köksmaskin i 50-talsstil från italienska Smeg med modellnummer SMF02. Den har en stor skål på 4,8 liter tillverkad i polerad rostfritt stål. Den här köksmaskinen klarar allt från att vispa grädde till röra ihop bulldegar. Köksmaskinen med modellnummer SMF02 är en funktionell och snygg inredningsdetalj i ditt kök.",
+    img: "/brands/smeg/kitchen-assistant/smeg-koksmaskin-bla.png",
+    colors: [
+        "/pink.png",    
+        "/blue.png",
+        "/green.png",
+        "/red.png",
+    ],
+    colorTypes: [
+      { id: "smeg-kitchen-assistant-pink",
+      img: "/brands/smeg/kitchen-assistant/smeg-koksmaskin-rosa.png" },
+      {
+        id: "smeg-kitchen-assistant-green",
+        img: "/brands/smeg/kitchen-assistant/smeg-koksmaskin-gron.png",
+      },
+      {
+        id: "smeg-kitchen-assistant-red",
+        img: "/brands/smeg/kitchen-assistant/smeg-koksmaskin-rod.png",
+      },
+    ]
+  },
+  {
+    id: "smeg-toaster-x4-steel",
+    name: "Smeg brödrost 4 skivor",
+    price: 2000,
+    desc: "Brödrost i 50-talsstil från italienska Smeg. Sex olika nivåer av rostningsgrad för perfekt bröd varje gång. Brödrosten har extra breda fack som rymmer två skivor på rad, samt löstagbar smuluppsamlare. En funktionell och snygg inredningsdetalj till ditt kök.",
+    img: "/brands/smeg/toaster-x4/smeg-brodrost-x4-stal.png",
+    colors: [
+        "/pink.png",    
+        "/blue.png",
+        "/green.png",
+        "/red.png",
+        "/steel.png",
+    ],
+    colorTypes: [
+      { id: "smeg-toaster-x4-pink",
+      img: "/brands/smeg/toaster-x4/smeg-brodrost-x4-rosa.png" },
+      {
+        id: "smeg-toaster-x4-blue",
+        img: "/brands/smeg/toaster-x4/smeg-brodrost-x4-pastellbla.png",
+      },
+      {
+        id: "smeg-toaster-x4-green",
+        img: "/brands/smeg/toaster-x4/smeg-brodrost-x4-pastellgron.png",
+      },
+      {
+        id: "smeg-toaster-x4-red",
+        img: "/brands/smeg/toaster-x4/smeg-brodrost-x4-rod.png",
+      },
+    ]
+  },
+  {
     id: "smeg-fridge-combined-red",
     name: "Smeg kylskåp kombinerat",
     price: 15000,

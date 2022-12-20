@@ -7,7 +7,7 @@
  body { 
   min-height: 100vh;
   width: 100%;
-  background: url(/src/images/background-boomerang.png);
+  background-color: orange;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,4 +29,177 @@
     background-color: #fdb6fd;
     transform: translateY(145px);
   }
+}
+
+.shop {
+  position: absolute;
+  transform: translateY(5%);
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 223px);
+  gap: 5%;
+  @include m.sm {
+    gap: 7%;
+    grid-template-columns: repeat(2, 223px);
+  }
+  @include m.md {
+    gap: 2%;
+    grid-template-columns: repeat(3, 30%);
+  }
+  @include m.lg {
+  grid-template-columns: repeat(4, 15%);
+  }
+}
+
+.shop > div > h3 {
+font-size: 20px;
+text-align: center;
+}
+
+.shop > div > h2 {
+  font-size: 20px;
+  text-align: center;
+  }
+
+.product-card {
+  height: 100%;
+}
+
+.productImg {
+  width: 100%;
+  padding: 4%;
+  @include m.sm {
+    padding: 4%;
+    min-width: 90%;
+  }
+  @include m.md {
+  padding: 8%;
+  min-width: 100%;
+  }
+  @include m.lg {
+  padding: 9%;
+  min-width: 50%;
+  }
+}
+
+.colorChoice {
+  text-align: center;
+}
+
+.colors {
+  margin: 5px;
+  border: 1.5px solid black;
+  border-radius: 50%;
+/*   transform: translateX(50%);
+  justify-content: center; */
+  width: 20px;
+  height: 20px;
+}
+
+.viewBtn {
+  display: none;
+}
+
+.modalBg {
+  background-color: purple;
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  border: 2px double grey;
+  transform: translateY(25%);
+  @include m.sm {
+    background-color: rgb(105, 25, 211);
+    border: 2px double grey;
+transform: translateY(15%);
+  }
+  @include m.md {
+    background-color: rgb(8, 252, 179);
+    border: 2px double grey;
+    transform: translateY(15%) translateX(12%);
+    height: 70%;
+    width: 80%;
+  }
+  @include m.lg {
+    background-color: orange;
+    border: 2px double grey;
+    transform: translateY(5%) translateX(15%);
+    height: 70%;
+    width: 80%;
+  }
+}
+
+.modalImg {
+   max-width: 50%;
+  transform: translateY(6%);
+  @include m.sm {
+    max-width: 45%;
+    transform: translateX(5%) translateY(5%);
+  }
+  @include m.md {
+    max-width: 60%;
+    transform: translateX(5%) translateY(5%);
+  }
+  @include m.lg {
+  max-width: 50%;
+  transform: translateY(6%);
+  }
+}
+
+.header {
+  position: absolute;
+  font-size: 5px;
+  left: 62%;
+  top: 5%;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ font-size: 2rem;
+ @include m.sm {
+
+ }
+ @include m.md {
+   
+ }
+ @include m.lg {
+   
+ }
+}
+
+.descContainer {
+  position: absolute;
+  font-size: 80%;
+  left: 2%;
+  bottom: 2%;
+  background-color: #fdb6fd;
+  width: 95%;
+  height: 25%;
+  @include m.sm {
+  width: 95%;
+  height: 20%;
+  }
+  @include m.md {
+  left: 65%;
+  bottom: 25%;
+  max-width: 30%;
+  max-height: 30%;
+  }
+  @include m.lg {
+    
+  }
+}
+
+.addToCart {
+  font-size: 22px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  width: 30%;
+  height: 8%;
+  transform: translateX(35%);
+} 
+
+.c {
+  position: absolute;
+  right: 2%;
+  font-size: x-large;
+  top: 0%;
 }
