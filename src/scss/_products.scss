@@ -124,7 +124,7 @@ transform: translateY(15%);
   @include m.lg {
     background-color: orange;
     border: 2px double grey;
-    transform: translateY(7%) translateX(15%);
+    transform: translateY(5%) translateX(15%);
     height: 70%;
     width: 80%;
   }
@@ -187,6 +187,15 @@ transform: translateY(15%);
     
   }
 }
+
+.addToCart {
+  font-size: 22px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: white;
+  width: 30%;
+  height: 8%;
+  transform: translateX(35%);
+} 
 
 .c {
   position: absolute;

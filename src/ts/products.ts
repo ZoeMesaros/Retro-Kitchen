@@ -2,8 +2,8 @@
 
 let shop = document.getElementById("shop") as HTMLDivElement;
 
-/* function closeWindow(id: string) {
-  closeModal.style.display = "none"
+/* function closeModalWindow {
+  modalList.style.display = "none"
 } */
 
 function openModal(id: string) {
@@ -16,12 +16,10 @@ function openModal(id: string) {
     modalList.classList.add("modalBg");
     document.body.appendChild(modalList);
 
-    modalList.style.display= "block";
 
     let closeModal = document.createElement("span") as HTMLSpanElement;
     closeModal.classList.add("close"[0]);
     closeModal.innerHTML= `&times`
-/*     closeModal.addEventListener("click", closeWindow) */
     document.body.appendChild(closeModal);
 
     let header = document.createElement("h1");
@@ -33,6 +31,12 @@ function openModal(id: string) {
     colorForm.classList.add("colorForm");
     colorForm.innerHTML = `${modalItems.name}`;
     document.body.appendChild(colorForm); */
+
+    let addButton = document.createElement("button");
+    addButton.classList.add("addToCart");
+    addButton.innerHTML = `Lägg till i varukorgen`;
+    document.body.appendChild(addButton);
+
 
     let descContainer = document.createElement("div") as HTMLDivElement;
     descContainer.classList.add("descContainer");
@@ -46,6 +50,7 @@ function openModal(id: string) {
 /*     modalList.appendChild(colorForm); */
     modalList.appendChild(modalImg);
     modalList.appendChild(descContainer);
+    modalList.appendChild(addButton)
     modalList.appendChild(header);
     modalList.appendChild(closeModal);
     shop.appendChild(modalList);
