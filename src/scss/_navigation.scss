@@ -14,7 +14,7 @@ header {
   height: 102px;
 }
 @include m.lg {
-  height: 150px;
+  height: 240px;
 }
   img {
     transform: translateX(-70px);
@@ -32,8 +32,8 @@ header {
     }
     @include m.lg {
       padding-bottom: 40px;
-      transform: translateY(10px);
-      width: 170px;
+      transform: translateY(20px);
+      width: 250px;
     }
   }
 }
@@ -41,27 +41,31 @@ header {
   .cart {
     display: inline;
       position: relative;
+      font-size: 18px;
       color:#646464;
       padding-right: 20px;
       left: 30px;
       top: 3px;
     @include m.sm {
+      font-size: 18px;
       padding-right: 20px;
       display: block;
       left: 35%;
-      top: -90px;
+      top: -95px;
     }
     @include m.md {
+      font-size: 22px;
       display: block;
       padding-right: 20px;
       left: 40%;
-      top: -90px;
+      top: -92px;
     }
     @include m.lg {
+      font-size: 22px;
       display: block;
       padding-right: 20px;
-      left: 36%;
-      top: -90px;
+      left: 34%;
+      top: -110px;
     }
     a:link {
       color: #646464;
@@ -73,19 +77,30 @@ header {
       position: absolute;
       font-size: 11px;
       font-weight: bolder;
-      transform: translateY(30px) translateX(12px);
+      transform: translateY(31px) translateX(12px);
       color: white;
       @include m.sm {
-        transform: translateY(-2px) translateX(12px);
+        transform: translateX(14px);
       }
       @include m.md {
-        transform: translateY(-2px) translateX(12px);
+        transform: translateY(2px) translateX(17px);
       }
       @include m.lg {
-        transform: translateY(-2px) translateX(12px);
+        transform: translateY(2px) translateX(17px);
       }
     }
   }
+
+  .cart-text {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 17px;
+    display: none;
+    @include m.md {
+      display: block;
+    }
+  }
+
 
   //Mobile
 
@@ -226,16 +241,25 @@ a:hover {
     transform: translateY(-48%);
   }
   &__list {
+    transform: translateY(-38px);
     font-family: 'Sora', sans-serif;
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: -1;
       list-style: none;
       display: flex;
       justify-content: space-evenly;
       width: 100%;
-      height: 42px;
+      height: 40px;
       background-color: rgb(255, 255, 255);
-      border-bottom: 3px solid #fdb6fd;
+      @include m.md {
+        transform: translateY(-51px);
+        border-bottom: 3px solid #fdb6fd;
+      }
+      @include m.lg {
+        border-bottom: 3px solid #ffffff;
+        padding-top: 15px;
+        transform: translateY(-74px);
+      }
       }
 }
 
