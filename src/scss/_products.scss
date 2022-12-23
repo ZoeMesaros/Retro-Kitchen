@@ -107,20 +107,17 @@ body {
   position: fixed;
   width: 100%;
   height: 50%;
-  border: 2px double grey;
+  border: 2px double rgb(209, 209, 209);
   transform: translateY(25%);
   @include m.sm {
-    border: 2px double grey;
     transform: translateY(15%);
   }
   @include m.md {
-    border: 2px double grey;
     transform: translateY(15%) translateX(12%);
     height: 70%;
     width: 80%;
   }
   @include m.lg {
-    border: 2px double grey;
     transform: translateY(4%) translateX(32%);
     height: 70%;
     width: 62%;
@@ -223,7 +220,7 @@ body {
 .c {
   position: absolute;
   text-align: center;
-  border: 2px solid rgb(150, 150, 150);
+  border: 2px double rgb(194, 194, 194);
   border-radius: 50%;
   width: 50px;
   height: 45px;
