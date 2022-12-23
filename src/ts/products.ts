@@ -1,6 +1,9 @@
 /* import { shopItemsData } from "./products-data"; */
 
 let shop = document.getElementById("shop") as HTMLDivElement;
+let cartlist:any[] = [];
+let addedItemsCount = localStorage.length.toString();
+
 
 
 function openModal(id: string) {
@@ -35,7 +38,7 @@ function openModal(id: string) {
     colorForm.innerHTML = `${modalItems.name}`;
     document.body.appendChild(colorForm); */
 
-    let addButton = document.createElement("button");
+    let addButton = document.createElement("button") as HTMLButtonElement;
     addButton.classList.add("addToCart");
     addButton.innerHTML = `Lägg till i varukorgen`;
     document.body.appendChild(addButton);
@@ -57,6 +60,13 @@ function openModal(id: string) {
     modalList.appendChild(header);
     modalList.appendChild(closeModal);
     shop.appendChild(modalList);
+
+    //Lägg till produkt
+    addButton.addEventListener("click", () => {
+      console.log(modalItems)
+        cartlist.push(modalItems);
+      localStorage.setItem("CartList", JSON.stringify(cartlist))
+    });
   }
 }
 
