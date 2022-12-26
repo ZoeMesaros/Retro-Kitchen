@@ -210,7 +210,7 @@ body {
   @include m.md {
     font-size: 18px;
     transform: translateX(20%) translateY(350%);
-  }
+  } 
   @include m.lg {
     font-size: 20px;
     transform: translateX(20%) translateY(350%);
