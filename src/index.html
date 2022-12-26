@@ -42,6 +42,14 @@
       rel="stylesheet"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+    <script>
+      window.onload = function(){
+        let arrayFromStroage = JSON.parse(localStorage.getItem("CartList"));
+        let arrayLength = arrayFromStroage.length;
+        console.log(arrayLength);
+        document.getElementById('output').innerHTML = arrayLength;
+      };
+      </script>
   </head>
   <body>
     <header>
@@ -51,7 +59,7 @@
         alt="Retro Kitchen"
       /></a>
       
-      <section class="cart"><a href="/src/html/cart.html"><span class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
+      <section class="cart"><a href="/src/html/cart.html"><span id="output" class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
       </section>
 <!-- //*Mobile*\\ -->
 <nav role='navigation'>

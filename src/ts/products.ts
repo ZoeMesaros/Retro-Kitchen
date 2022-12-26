@@ -1,8 +1,9 @@
 /* import { shopItemsData } from "./products-data"; */
 
 let shop = document.getElementById("shop") as HTMLDivElement;
+let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist:any[] = [];
-let addedItemsCount = localStorage.length.toString();
+
 
 
 
@@ -64,7 +65,10 @@ function openModal(id: string) {
     //Lägg till produkt
     addButton.addEventListener("click", () => {
       console.log(modalItems)
-        cartlist.push(modalItems);
+      cartlist.push(modalItems);
+      modalItems.id = modalItems.id + '-' + Math.random();
+      
+      cartIcon.innerHTML = JSON.parse(localStorage.getItem('CartList') as string).length + 1;
       localStorage.setItem("CartList", JSON.stringify(cartlist))
     });
   }
