@@ -5,8 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Kitchen</title>
-    <link rel="stylesheet" href="/src/scss/_contact.scss" />
+    <link rel="stylesheet" href="/src/scss/_cart.scss" />
     <script src="/src/ts/main.ts" defer></script>
+    <script src="/src/ts/cart.ts" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet"> 
@@ -41,6 +42,14 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.onload = function(){
+        let arrayFromStroage = JSON.parse(localStorage.getItem("CartList"));
+        let arrayLength = arrayFromStroage.length;
+        console.log(arrayLength);
+        document.getElementById('output').innerHTML = arrayLength;
+      };
+      </script>
   </head>
   <body>
     <header>
@@ -50,7 +59,7 @@
         alt="Retro Kitchen"
       />
       
-      <section class="cart"><a href="/src/html/cart.html"><span class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
+      <section class="cart"><a href="/src/html/cart.html"><span id="output" class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
       </section>
 <!-- //*Mobile*\\ -->
 <nav role='navigation'>
@@ -89,6 +98,15 @@
   </ul>
 </nav>
     </header>
+    <main>
+      <div class="shopping-cart" id="shopping-cart"></div>
+          <!-- <button id="myBtn">Open Modal</button>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modap>
+      </div> -->
+      </div>
+    </main>
     <footer></footer>
   </body>
 </html>
