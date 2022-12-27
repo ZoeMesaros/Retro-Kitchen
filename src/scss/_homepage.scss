@@ -2,15 +2,15 @@
 @use "mixins" as m;
 @use "reset";
 @use "navigation";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200&family=Sora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
-body { 
+body {
   min-height: 100vh;
   width: 100%;
   background: url(/src/images/background-boomerang.png);
   background-position: center center;
   background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .sale {
@@ -27,56 +27,175 @@ body {
   }
 }
 
-#star {
-  filter: invert(100%) drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.685));
-  width: 20px;
-  transform: translateX(-10.6rem) translateY(0.2rem);
-  @include m.md {
-    width: 40px;
-    transform: translateX(-21rem) translateY(0.2rem);
+.white-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 120vh;
+  width: 80%;
+  transform: translateX(12%);
+  background-color: white;
+  @include m.sm {
+    height: 105vh;
+    transform: translateX(12%);
   }
-}
-#star2 {
-  filter: invert(100%) drop-shadow(2px 3px 0px rgba(0, 0, 0, 0.685));
-  width: 20px;
-  transform: translateX(-1.6rem) translateY(0.2rem) scaleX(-1);
   @include m.md {
-    width: 40px;
-    transform: translateX(-3.5rem) translateY(0.2rem) scaleX(-1);;
-  }
-}
-
-#mistletoe {
-  position: relative;
-  width: 9%;
-  transform: translateX(1020%) translateY(-650%);
-  @include m.md {
-    width: 7%;
-    transform: translateX(1350%) translateY(-825%);
-  }
-}
-
-#cane {
-  position: relative;
-  width: 10%;
-  transform: translateX(-150%) translateY(-600%) scaleX(-1);
-    @include m.md {
-    width: 7%;
-    transform: translateX(-150%) translateY(-840%) scaleX(-1);
-  }
-}
-
-.carousel-feature {
-  position: absolute;
-  height: 30%;
-  transform: translateX(5%) translateY(-5%);
-  width: 90%;
-  @include m.md {
-    padding-top: 60px;
+    height: 130vh;
+    transform: translateY(2.7%) translateX(12%);
   }
   @include m.lg {
-    padding-top: 70px;
+    min-height: 180vh;
+     transform: translateX(12%);
+  }
+  .carousel-feature {
+    position: absolute;
     width: 70%;
-    transform: translateX(17%);
+    top: 2%;
+    @include m.sm {
+    }
+    @include m.sm {
+    }
+    @include m.lg {
+    }
+    .carousel-control-prev {
+      left: -60px;
+    }
+    .carousel-control-next {
+      right: -60px;
+    }
+    .main-text {
+      top: 20%;
+      font-size: 14px;
+      font-weight: 400;
+      text-align: center;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      @include m.sm {
+        font-size: 12px;
+      }
+      @include m.md {
+        padding-top: 2%;
+        font-size: 20px;
+      }
+      @include m.lg {
+        padding-top: 6%;
+        font-size: 30px;
+      }
+    }
+  }
+  .text-box1 {
+    padding-top: 12%;
+    &__description {
+      padding-left: 5%;
+      padding-right: 5%;
+      font-size: 15px;
+      @include m.md {
+        font-size: 20px;
+      }
+      @include m.lg {
+        font-size: 20px;
+      }
+    }
+    .main-img {
+      padding-right: 1%;
+      float: left;
+      max-width: 40%;
+      @include m.md {
+        padding-right: 3%;
+      }
+      @include m.lg {
+        padding-right: 3%;
+      }
+    }
+    p {
+      a {
+        color: #fdb6fd;
+      }
+      a:link {
+        color: rgb(206, 206, 206);
+      }
+      a:hover {
+        color: rgb(241, 239, 234);
+      }
+      a:visited {
+        background-color: rgb(255, 255, 255);
+      }
+      @include m.lg {
+        letter-spacing: 1px;
+      }
+    }
+  
   }
 }
+
+.text-box2 {
+  padding-top: 8%;
+  @include m.lg {
+    padding-top: 15%;
+  }
+  &__description {
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 15px;
+    @include m.md {
+      font-size: 20px;
+    }
+    @include m.lg {
+      font-size: 20px;
+    }
+  }
+  .main-img2 {
+    padding-right: 1%;
+    float: right;
+    max-width: 50%;
+    @include m.md {
+      padding-left: 3%;
+    }
+    @include m.lg {
+      max-width: 40%;
+      padding-left: 3%;
+    }
+  }
+  p {
+    a  {
+      color: #fdb6fd;
+    }
+    a:link {
+      color: #fdb6fd;
+    }
+    a:hover {
+      color: rgb(241, 239, 234);
+    }
+    a:visited {
+      background-color: rgb(255, 255, 255);
+    }
+    @include m.lg {
+      padding-top: 3%;
+      letter-spacing: 1px
+    }
+  }
+}
+
+ .text-choice {
+    padding-top: 18%;
+    font-size: 15px;
+    text-align: center;
+    @include m.sm {
+      padding-top: 5%;
+      font-size: 15px;
+    }
+    @include m.sm {
+      font-size: 18px;
+    }
+    @include m.lg {
+      font-size: 30px;
+    }
+  }
+  .img-section {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    img {
+      width: 15%;
+    }
+  }

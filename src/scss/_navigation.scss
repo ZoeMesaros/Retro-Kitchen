@@ -98,19 +98,19 @@ header {
         transform: translateX(48px) translateY(-16px);
       }
     }
-  }
-
-  .cart-text {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: black;
-    font-size: 17px;
-    display: none;
-    transform: translateX(10px);
-    @include m.md {
-      display: block;
+    .cart-text {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      color: black;
+      font-size: 17px;
+      display: none;
+      transform: translateX(10px);
+      @include m.md {
+        display: block;
+      }
     }
   }
 
+  
 
   //Mobile
 
