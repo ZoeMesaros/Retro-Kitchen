@@ -1,1 +1,1 @@
-let shoppingCart = [{}]
+//let shoppingCart = [{}]
