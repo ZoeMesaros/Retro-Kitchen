@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
 body {
-  min-height: 100vh;
+  height: 100vh;
   width: 100%;
   background: url(/src/images/background-boomerang.png);
   background-position: center center;
@@ -32,7 +32,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  height: 120vh;
+  min-height: 120vh;
   width: 80%;
   transform: translateX(12%);
   background-color: white;
@@ -130,8 +130,11 @@ body {
 
 .text-box2 {
   padding-top: 8%;
-  @include m.lg {
+  @include m.md {
     padding-top: 15%;
+  }
+  @include m.lg {
+    padding-top: 25%;
   }
   &__description {
     padding-left: 5%;
