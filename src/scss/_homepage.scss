@@ -41,11 +41,11 @@ body {
     transform: translateX(12%);
   }
   @include m.md {
-    min-height: 1200px;
+    min-height: 1250px;
     transform: translateY(2.7%) translateX(12%);
   }
   @include m.lg {
-    min-height: 2500px;
+    min-height: 1600px;
      transform: translateX(12%);
   }
   .carousel-feature {
