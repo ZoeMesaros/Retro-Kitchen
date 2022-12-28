@@ -32,20 +32,20 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 120vh;
+  min-height: 1000px;
   width: 80%;
   transform: translateX(12%);
   background-color: white;
   @include m.sm {
-    height: 105vh;
+    max-height: 1200px;
     transform: translateX(12%);
   }
   @include m.md {
-    height: 130vh;
+    min-height: 1200px;
     transform: translateY(2.7%) translateX(12%);
   }
   @include m.lg {
-    min-height: 180vh;
+    min-height: 2500px;
      transform: translateX(12%);
   }
   .carousel-feature {
