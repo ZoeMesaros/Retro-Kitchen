@@ -65,10 +65,11 @@ function openModal(id: string) {
     //Lägg till produkt
     addButton.addEventListener("click", () => {
       console.log(modalItems)
+      
       cartlist.push(modalItems);
       modalItems.id = modalItems.id + '-' + Math.random();
       
-      cartIcon.innerHTML = JSON.parse(localStorage.getItem('CartList') as string).length + 1;
+      cartIcon.innerHTML = JSON.parse(localStorage.getItem('CartList') || "[]").length + 1;
       localStorage.setItem("CartList", JSON.stringify(cartlist))
     });
   }
