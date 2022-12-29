@@ -4,9 +4,6 @@ let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist:any[] = [];
 
-
-
-
 function openModal(id: string) {
   for (let i = 0; i < shopItemsData.length; i++) {
     const modalItems = shopItemsData[i];

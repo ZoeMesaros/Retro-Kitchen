@@ -44,10 +44,15 @@ for (let index = 0; index < storedProducts.length; index++) {
         
     })
     cartItem.appendChild(removeItemButton);
-    
 }
 
+/* let checkoutButton = document.createElement("button") as HTMLButtonElement;
+checkoutButton.classList.add("checkout");
+checkoutButton.innerHTML = `Gå till kassan`;
+checkoutButton.addEventListener('click', goToCheckout)
+document.body.appendChild(checkoutButton);
+shoppingCart.appendChild(checkoutButton)
 
-
-
-
+function goToCheckout () {
+    location.href = "checkout.html"
+} */
