@@ -1,4 +1,4 @@
-const shopItemsData = [
+export const shopItemsData = [
     {
     id: "ariete-coffee-blue",
     name: "Ariete kaffebryggare",
