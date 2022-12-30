@@ -1,7 +1,3 @@
-/* import { shopItemsData } from "./products-data"; */
-
-
-
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist:any[] = [];
@@ -43,11 +39,6 @@ function openModal(id: string) {
     header.innerHTML = `${modalItems.name}`;
     document.body.appendChild(header);
 
-  /*   let colorForm = document.createElement("option") as HTMLOptionElement;
-    colorForm.classList.add("colorForm");
-    colorForm.innerHTML = `${modalItems.name}`;
-    document.body.appendChild(colorForm); */
-
     let addButton = document.createElement("button") as HTMLButtonElement;
     addButton.classList.add("addToCart");
     addButton.innerHTML = `Lägg till i varukorgen`;
@@ -63,7 +54,6 @@ function openModal(id: string) {
     modalImg.classList.add("modalImg");
     modalImg.src = `${modalItems.img}`;
 
-/*     modalList.appendChild(colorForm); */
     modalList.appendChild(modalImg);
     modalList.appendChild(descContainer);
     modalList.appendChild(addButton)
