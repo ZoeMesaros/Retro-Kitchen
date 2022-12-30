@@ -1,5 +1,7 @@
 /* import { shopItemsData } from "./products-data"; */
 
+
+
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist:any[] = [];
@@ -8,10 +10,10 @@ class CartItem {
   product: {};
   amount: number;
 
-  constructor(product: {}, amount: number ) {
+  constructor(product: {}, amount: number) {
     this.product = product;
     this.amount = amount;
-}
+  }
 }
 
 function openModal(id: string) {
