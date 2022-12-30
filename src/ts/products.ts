@@ -1,12 +1,12 @@
 /* import { shopItemsData } from "./products-data"; */
 
-import { shopItemsData } from "./products-data";
+
 
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist:any[] = [];
 
-export class CartItem {
+class CartItem {
   product: {};
   amount: number;
 
