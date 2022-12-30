@@ -4,6 +4,16 @@ let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist:any[] = [];
 
+class CartItem {
+  product: {};
+  amount: number;
+
+  constructor(product: {}, amount: number ) {
+    this.product = product;
+    this.amount = amount;
+}
+}
+
 function openModal(id: string) {
   for (let i = 0; i < shopItemsData.length; i++) {
     const modalItems = shopItemsData[i];
@@ -60,13 +70,24 @@ function openModal(id: string) {
     shop.appendChild(modalList);
 
     //Lägg till produkt
+    let cartItems = new CartItem(modalItems, 1)
+
     addButton.addEventListener("click", () => {
-      console.log(modalItems)
       
-      cartlist.push(modalItems);
+      if (!cartlist.includes(cartItems)) {
+        //only runs if value not in array
+        cartlist.push(cartItems);
+      } else {
+        console.log("Denna vara finns redan")
+        localStorage.setItem("CartList", JSON.stringify(cartlist))
+      }
+      console.log(cartItems)
+
+    
       modalItems.id = modalItems.id + '-' + Math.random();
-      
+            
       cartIcon.innerHTML = JSON.parse(localStorage.getItem('CartList') || "[]").length + 1;
+      
       localStorage.setItem("CartList", JSON.stringify(cartlist))
     });
   }
