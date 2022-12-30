@@ -1,10 +1,10 @@
 /* import { shopItemsData } from "./products-data"; */
+import { CartItem } from "./cartItem";
+import { ShopItemData } from "./ShopItemData";
 
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
-let cartlist:any[] = [];
-
-
+let cartlist: any[] = [];
 
 
 function openModal(id: string) {
@@ -66,7 +66,56 @@ function openModal(id: string) {
     addButton.addEventListener("click", () => {
       console.log(modalItems)
       
-      cartlist.push(modalItems);
+      
+      //LÄGGA TILL HÄR
+      let cartList = localStorage.getItem('CartList') || [];
+      let shopItemData = new ShopItemData(modalItems.id, modalItems.name, modalItems.price, modalItems.desc, modalItems.img, modalItems.colors[0]);
+      let cartItem = new CartItem(shopItemData, 1);
+
+      // For loop för att kolla om modalItems.id matchar något av id:erna som redan finns i cartList
+      //for loop på cartList 
+      
+      
+
+      /*if(cartlist.length === 0){
+        cartlist.push(cartItem);
+      }else{
+        for(let i = 0; i < cartlist.length; i++){ 
+          const item = cartlist[i]; 
+          if(modalItems.id === item.shopItemData.id){
+
+            OM PRODUKTEN REDAN FINNS ITEM.AMOUNT++ (SMÅ BOKSTÄVER) RAD 79, 
+
+
+            console.log("finns redan")
+          }else{ 
+
+            
+          
+            console.log("ny produkt")
+          }
+        }
+      }*/
+      console.log(cartItem.shopItemData)
+      if(cartlist.length === 0){
+        cartlist.push(cartItem);
+        
+      }else{ 
+        for(let i = 0; i < cartlist.length; i++){ 
+        
+        if(modalItems.id === cartlist[i].shopItemData.id){
+          cartlist[i].amount+=1; //++?
+            break;
+          console.log("finns redan")
+        }if(i === cartlist.length -1){
+          cartlist.push(cartItem);
+          
+          console.log("ny produkt")
+        }
+      
+      }
+    }
+      //cartlist.push(cartItem);
       modalItems.id = modalItems.id + '-' + Math.random();
       
       cartIcon.innerHTML = JSON.parse(localStorage.getItem('CartList') || "[]").length + 1;
@@ -74,6 +123,7 @@ function openModal(id: string) {
     });
   }
 }
+
 
 for (let i = 0; i < shopItemsData.length; i++) {
   const shopItems = shopItemsData[i];

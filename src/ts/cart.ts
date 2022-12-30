@@ -3,9 +3,12 @@ const storedProducts = JSON.parse(localStorage.getItem('CartList') as string);
 let cartIconValue = document.getElementById("output") as HTMLDivElement;
 let shoppingCart = document.getElementById("shopping-cart") as HTMLDivElement;
 
-
+console.log(storedProducts)
 for (let index = 0; index < storedProducts.length; index++) {
-    const product = storedProducts[index];
+    const product = storedProducts[index].shopItemData; 
+   
+    // La till .shopItemData för att komma åt det objektet som finns i storedProduct som är en lista av cartItems
+    
     let cartItem = document.createElement("div") as HTMLDivElement;
     cartItem.classList.add("product-card");
     shoppingCart.appendChild(cartItem);

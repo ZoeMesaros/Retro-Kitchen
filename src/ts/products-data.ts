@@ -1,11 +1,13 @@
-interface shopItemsData {
+/*import { cartItem } from "./cartItem";*/
+
+/*class ShopItemsData {     //interface shopItemsData
   id: string;
   name: string;
   price: number;
   desc: string;
   img: string;
   colors: string;
-}
+}*/
 
 const shopItemsData = [
     {
