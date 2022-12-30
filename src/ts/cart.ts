@@ -117,3 +117,9 @@ for (let index = 0; index < storedProducts.length; index++) {
     })
     cartItem.appendChild(removeItemButton);
 }
+//Kassaknappen
+
+let checkout: HTMLButtonElement = document.getElementById("kassa") as HTMLButtonElement;
+checkout.addEventListener("click", () => { 
+    location.href = "./checkout.html"; 
+});
