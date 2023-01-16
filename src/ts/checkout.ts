@@ -25,7 +25,7 @@ function createHtmlForCheckout() {
 
   let myForm = document.getElementById("myForm") as HTMLFormElement;
   myForm.addEventListener("submit", function(e) {
-    e.preventDefault(); // pause submission
+    e.preventDefault();
     let h1 = document.getElementById("hiddenMessage") as HTMLElement
     h1.style.display = "block";
     let formDiv = document.getElementById("formDiv") as HTMLDivElement
