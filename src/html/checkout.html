@@ -6,10 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Kitchen</title>
     <link rel="stylesheet" href="/src/scss/_checkout.scss" />
-    <script src="/src/ts/main.ts" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet"> 
+    <script src="/src/ts/checkout.ts" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/b3674b136c.js"
       crossorigin="anonymous"
@@ -44,87 +47,100 @@
   </head>
   <body>
     <header>
-      <a href="/src/index.html"><img
-        class="retrologo"
-        src="/src/images/retrokitchen.png"
-        alt="Retro Kitchen"
+      <a href="/src/index.html"
+        ><img
+          class="retrologo"
+          src="/src/images/retrokitchen.png"
+          alt="Retro Kitchen"
       /></a>
-      <section class="cart"><a href="/src/html/cart.html"><span class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
+      <section class="cart">
+        <a href="/src/html/cart.html"
+          ><span class="cart__counter">0</span
+          ><i class="fa-solid fa-cart-shopping fa-xl"></i>
+          <p class="cart-text">Kundvagn</p></a
+        >
       </section>
-<!-- //*Mobile*\\ -->
-<nav role='navigation'>
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <span></span>
-    <span></span>
-    <span></span>
-    <ul id="menu">
-      <a href="/src/html/products.html">
-        <li>Alla produkter</li>
-      </a>
-      <a href="/src/html/products.html">
-        <li>Köksmaskiner</li>
-      </a>
-      <a href="/src/html/products.html">
-        <li>Vitvaror</li>
-      </a>
-      <a href="/src/html/about.html">
-        <li>Om oss</li>
-      </a>
-      <a href="/src/html/contact.html">
-        <li>Kontakt</li>
-      </a>
-    </ul>
-  </div>
-</nav>
-<!-- //*Desktop*\\ -->
-<nav class="desktop">
-  <ul class="desktop__list">
-    <li><a href="/src/index.html">Start</a></li>
-    <li><a href="/src/index.html">Nyheter</a></li>
-    <li><a href="/src/html/products.html">Sortiment</a></li>
-    <li><a href="/src/html/about.html">Om oss</a></li>
-    <li><a href="/src/html/contact.html">Kontakt</a></li>
-  </ul>
-</nav>
+      <!-- //*Mobile*\\ -->
+      <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <span></span>
+          <span></span>
+          <span></span>
+          <ul id="menu">
+            <a href="/src/html/products.html">
+              <li>Alla produkter</li>
+            </a>
+            <a href="/src/html/products.html">
+              <li>Köksmaskiner</li>
+            </a>
+            <a href="/src/html/products.html">
+              <li>Vitvaror</li>
+            </a>
+            <a href="/src/html/about.html">
+              <li>Om oss</li>
+            </a>
+            <a href="/src/html/contact.html">
+              <li>Kontakt</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <!-- //*Desktop*\\ -->
+      <nav class="desktop">
+        <ul class="desktop__list">
+          <li><a href="/src/index.html">Start</a></li>
+          <li><a href="/src/index.html">Nyheter</a></li>
+          <li><a href="/src/html/products.html">Sortiment</a></li>
+          <li><a href="/src/html/about.html">Om oss</a></li>
+          <li><a href="/src/html/contact.html">Kontakt</a></li>
+        </ul>
+      </nav>
     </header>
-    <!--//Hör ihop med kassasidan
-    <div id="checkout-container"></div>-->
     <main>
-      <h1>Kundvagn</h1>
-      <form class="info">
-         <legend>Uppgifter</legend>
-         <label for="fname">Förnamn:</label>
-         <br>
-         <input type="text" id="fname" name="fname"><br><br>
-         <label for="lname">Efternamn:</label>
-         <br>
-         <input type="text" id="lname" name="lname"><br><br>
-         <label for="text">Adress:</label>
-         <br>
-         <input type="text" id="text" name="text"><br><br>
-         <label for="text">Postnummer:</label>
-         <br>
-         <input type="text" id="text" name="text"><br><br>
-         <label for="text">Ort:</label>
-         <br>
-         <input type="text" id="text" name="text"><br><br>
-      <h4>Välj betalsätt</h2>
-        <br>
-        <section>
-          <input type="radio" id="payment" name="klarna" value="Klarna" />
-          <label for="radiobtn1">
-            <img src="/src/images/klarna.png"/>
-          </label>
-        </section>
-        <section>
-            <input type="radio" id="payment" name="paypal" value="Paypal" />
-            <label for="radiobtn2">
-              <img src="/src/images/paypal.png"/>
-            </label>
-          </section>
-            <input type="submit" value="Genomför betalning">
-        </form>
+      <div class="form" id="formDiv">
+        <h1>Kundvagn</h1>
+        <form id="myForm">
+        <legend>Kundinformation</legend>
+        <div class="info-box">
+        <label class="firstName">Förnamn</label><br>
+        <input type="text" required="required" pattern="[A-Za-z]{1,20}" id="firstName"><br>
+        <label class="lastName">Efternamn</label><br>
+        <input type="text" required="required" pattern="[A-Za-z]{1,20}" id="lastName"><br>
+        <label class="adress">Adress</label><br>
+        <input type="text" required="required" id="adress"><br>
+        <label class="postal">Postnummer</label><br>
+        <input type="text" required="required" id="postal"><br>
+        <label class="city">Ort</label><br>
+        <input type="text" required="required" id="city"><br>
+      </div>
+      <h4>Välj betalsätt</h4>
+      <div class="info-box2">
+        <div class="options">
+        <input type="radio" id="payment" name="payment" value="Klarna"/>
+        <label for="radiobtn1">
+          <img src="/src/images/klarna.png"/>
+        </label>
+        <input type="radio" id="payment" name="payment" value="Paypal"/>
+        <label for="radiobtn2">
+          <img src="/src/images/paypal.png"/>
+        </label>
+        <input type="radio" id="payment" name="payment" value="Mastercard"/>
+        <label for="radiobtn3">
+          <img src="/src/images/mastercard.png"/>
+        </label>
+        <input type="radio" id="payment" name="payment" value="Visa"/>
+        <label for="radiobtn4">
+          <img src="/src/images/visa.png"/>
+        </label>
+      </div>
+    </div>
+    <button type="submit" class="submit">
+      <span>Slutför köp</span>
+  </button>
+    </form>
+      </div>
+      <h1 id="hiddenMessage" style="display: none">Tack för ditt köp!</h1>
     </main>
     <footer></footer>
   </body>
