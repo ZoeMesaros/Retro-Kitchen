@@ -1,4 +1,4 @@
-/*import { CartItem } from "./products";
+/* import { CartItem } from "./products";
 import { shopItemsData } from "./products-data";
 
 let checkoutContainer: HTMLDivElement = document.getElementById("checkout-container") as HTMLDivElement
@@ -21,4 +21,18 @@ function createHtmlForCheckout() {
         productTitle.innerHTML = productCartList[i].product.
   
     }
-  }*/
+  } */
+
+  let myForm = document.getElementById("myForm") as HTMLFormElement;
+  myForm.addEventListener("submit", function(e) {
+    e.preventDefault(); // pause submission
+    let h1 = document.getElementById("hiddenMessage") as HTMLElement
+    h1.style.display = "block";
+    let formDiv = document.getElementById("formDiv") as HTMLDivElement
+    formDiv.style.display = "none";
+    setTimeout(function() {
+      myForm.e.submit()
+    }, 2000)
+  }) 
+
+
