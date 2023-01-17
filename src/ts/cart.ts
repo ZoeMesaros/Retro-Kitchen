@@ -42,7 +42,7 @@ for (let index = 0; index < storedProducts.length; index++) {
     cartItem.appendChild(amountName);
 
     let productPrice = document.createElement("h3");
-/*     productPrice.innerHTML = `${product.product.price} SEK`; */
+    productPrice.innerHTML = `${product.product.price} SEK`;
     cartItem.appendChild(productPrice);
 
     let selectAmount = document.createElement("select") as HTMLSelectElement;

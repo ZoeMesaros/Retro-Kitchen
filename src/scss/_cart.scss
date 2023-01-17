@@ -45,6 +45,11 @@ body {
   height: 15%;
   width: 70%;
   border-bottom: 2px solid #fdb6fd;
+  @include m.sm {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
   @include m.md {
     top: 5%;
   }
@@ -67,17 +72,20 @@ h3 {
   position: absolute;
   top: 45%;
   left: 88%;
-
 }
 .choice {
   position: absolute;
   top: 45%;
   left: 65%;
   @include m.sm {
-    left: 62%;
+    left: 65%;
+    height: 23%;
+    font-size: 50%;
   }
   @include m.md {
     left: 60%;
+    height: 24%;
+    font-size: 80%;
   }
 }
 p {
@@ -85,10 +93,12 @@ p {
   top: 45%;
   left: 60%;
   @include m.sm {
+    display: none;
     left: 54%;
     font-size: 12px;
   }
   @include m.md {
+    display: inline;
     left: 52%;
   }
 }
@@ -103,10 +113,15 @@ p {
   top: 45%;
   left: 70%;
   @include m.sm {
+    font-size: 60%;
     width: 10%;
+    left: 75%;
   }
   @include m.md {
     left: 67%;
+    font-size: 80%;
+    width: 7%;
+    left: 70%;
   }
 }
 }
