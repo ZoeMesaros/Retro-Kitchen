@@ -1,7 +1,7 @@
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
-let cartlist:any[] = [];
-
+let cartlist:any[] = JSON.parse(localStorage.getItem('CartList') as string);
+cartIcon.innerHTML = cartlist.length.toString();
 class CartItem {
   product: {};
   amount: number;
@@ -65,20 +65,25 @@ function openModal(id: string) {
     let cartItems = new CartItem(modalItems, 1)
 
     addButton.addEventListener("click", () => {
-      
-      if (!cartlist.includes(cartItems)) {
-        //only runs if value not in array
-        cartlist.push(cartItems);
-      } else {
-        console.log("Denna vara finns redan")
-        localStorage.setItem("CartList", JSON.stringify(cartlist))
+      let found = false;
+      let foundItemIndex = 0;
+      for (let i = 0; i < cartlist.length; i++) {
+        const element = cartlist[i];
+        if (element.product.id === modalItems.id) {
+          found = true;
+          foundItemIndex = i;
+          break;
+        }
       }
-      console.log(cartItems)
-
-    
-      modalItems.id = modalItems.id + '-' + Math.random();
+      if (found) {
+        if (cartlist[foundItemIndex].amount < 3) {
+          cartlist[foundItemIndex].amount += 1
+        }
+      } else {
+        cartlist.push(cartItems);
+      }
             
-      cartIcon.innerHTML = JSON.parse(localStorage.getItem('CartList') || "[]").length + 1;
+      cartIcon.innerHTML = cartlist.length.toString();
       
       localStorage.setItem("CartList", JSON.stringify(cartlist))
     });

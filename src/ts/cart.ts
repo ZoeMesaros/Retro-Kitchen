@@ -20,7 +20,6 @@ for(var index of storedProducts){
 }
 totalSum.innerHTML = sum.toString();
 
-
 for (let index = 0; index < storedProducts.length; index++) {
     const product = storedProducts[index];
     let cartItem = document.createElement("div") as HTMLDivElement;
@@ -74,10 +73,10 @@ for (let index = 0; index < storedProducts.length; index++) {
         product.amount = selectAmount.selectedIndex;
         let totalAmount = 0;
 
+        productPrice.innerHTML = `${product.amount * product.product.price} SEK`;
         // loop and multiply with amount
         for(var i of storedProducts){
             var multiplyWithAmount = i.amount * i.product.price
-            productPrice.innerHTML = `${multiplyWithAmount} SEK`;
             totalAmount += multiplyWithAmount;           
             }
 
