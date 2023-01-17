@@ -45,7 +45,7 @@ body {
     grid-template-columns: repeat(2, 223px);
   }
   @include m.md {
-    gap: 2%;
+    gap: 5%;
     grid-template-columns: repeat(3, 30%);
   }
   @include m.lg {
@@ -92,8 +92,8 @@ body {
   margin: 5px;
   border: 1.5px solid black;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
 }
 
 .viewBtn {
