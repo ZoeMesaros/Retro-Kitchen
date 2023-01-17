@@ -15,21 +15,8 @@ body {
 .shopping-cart {
   position: absolute;
   width: 100%;
-  height: 75vh;
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(1, 223px);
-  @include m.sm {
-    gap: 7%;
-    grid-template-columns: repeat(2, 223px);
-  }
-  @include m.md {
-    gap: 2%;
-    grid-template-columns: repeat(3, 30%);
-  }
-  @include m.lg {
-  grid-template-columns: repeat(4, 15%);
-  }
+  height: 58vh;
+  align-items: center;
 }
 
 .shopping-cart > div > h3 {
@@ -46,26 +33,88 @@ body {
   height: 100%;
 }
 
-.itemImg {
-  display: flex;
-  width: 100%;
-  padding: 4%;
-  @include m.sm {
-    padding: 4%;
-    min-width: 90%;
-  }
-  @include m.md {
-  padding: 8%;
-  min-width: 100%;
-  }
-  @include m.lg {
-  padding: 9%;
-  min-width: 50%;
-  }
-}
+
 
 .product-card {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: space-between;
+  margin-left: 15%;
+  margin-right: 15%;
+  height: 15%;
+  width: 70%;
+  border-bottom: 2px solid #fdb6fd;
+  @include m.md {
+    top: 5%;
+  }
+  .itemImg {
+    position: absolute;
+    display: flex;
+    max-width: 80px;
+    top: 9%;
+    left: 2%;
+}
+.product-name {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  @include m.sm {
+    font-size: 15px;
+  }
+}
+h3 {
+  position: absolute;
+  top: 45%;
+  left: 88%;
+
+}
+.choice {
+  position: absolute;
+  top: 45%;
+  left: 65%;
+  @include m.sm {
+    left: 62%;
+  }
+  @include m.md {
+    left: 60%;
+  }
+}
+p {
+  position: absolute;
+  top: 45%;
+  left: 60%;
+  @include m.sm {
+    left: 54%;
+    font-size: 12px;
+  }
+  @include m.md {
+    left: 52%;
+  }
+}
+.remove {
+  position: absolute;
+  background-color: rgb(241, 241, 241);
+  border-radius: 4px;
+  border: 1px solid black;
+  width: 8%;
+  height: 24%;
+  font-size: 15px;
+  top: 45%;
+  left: 70%;
+  @include m.sm {
+    width: 10%;
+  }
+  @include m.md {
+    left: 67%;
+  }
+}
+}
+
+.sum {
+  position: fixed;
+  bottom: 200px;
+  right: 15%;
 }
 
 .remove {
@@ -81,7 +130,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(44, 228, 44);
+  background-color: rgb(46, 26, 226);
   font-size: 20px;
   width: 80%;
   height: 2%;
@@ -110,13 +159,15 @@ body {
 footer {
   position: fixed;
   left: 0;
-  bottom: 70;
+  bottom: 50;
   width: 100%;
   height: 80;
 color: white;
 text-align: center;
 button {
-  background-color: rgb(33, 233, 33);
+  border-radius: 10%;
+  border: 2px solid black;
+  background-color: rgb(243, 243, 243);
   width: 20%;
   height: 70%;
 }

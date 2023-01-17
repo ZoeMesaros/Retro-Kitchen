@@ -8,17 +8,17 @@ let totalSum = document.getElementById("total") as HTMLSpanElement;
 const numbers = ["0","1","2","3"];
 
 // Total sum updates directly
-let test = 0;
+let sum = 0;
 for(var index of storedProducts){
     var multiplyWithAmount = index.amount * index.product.price
-    test += multiplyWithAmount;           
+    sum += multiplyWithAmount;           
     }
 
     // Updates and removes previus sum
     while( totalSum.firstChild ) {
     totalSum.removeChild( totalSum.firstChild );
 }
-totalSum.innerHTML = test.toString();
+totalSum.innerHTML = sum.toString();
 
 
 for (let index = 0; index < storedProducts.length; index++) {
@@ -34,13 +34,19 @@ for (let index = 0; index < storedProducts.length; index++) {
 
     let productName = document.createElement("h3");
     productName.innerHTML = `${product.product.name}`;
+    productName.classList.add('product-name');
     cartItem.appendChild(productName);
 
+    let amountName = document.createElement('p');
+    amountName.innerHTML = `Antal`;
+    cartItem.appendChild(amountName);
+
     let productPrice = document.createElement("h3");
-    productPrice.innerHTML = `${product.product.price}`;
+/*     productPrice.innerHTML = `${product.product.price} SEK`; */
     cartItem.appendChild(productPrice);
 
     let selectAmount = document.createElement("select") as HTMLSelectElement;
+    selectAmount.classList.add('choice');
     cartItem.appendChild(selectAmount);
 
     for (var i = 0; i < numbers.length; i++) {
@@ -87,7 +93,7 @@ for (let index = 0; index < storedProducts.length; index++) {
 
     let removeItemButton = document.createElement("button") as HTMLButtonElement;
     removeItemButton.classList.add("remove");
-    removeItemButton.innerHTML = `ta bort`;
+    removeItemButton.innerHTML = `Radera`;
 
 
     removeItemButton.addEventListener("click", () => {

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/scss/_products.scss" />
     <script src="/src/ts/products.ts" defer></script>
     <script src="/src/ts/products-data.ts"></script>
+    <script src="/src/ts/main.ts"></script>
     <script
       src="https://kit.fontawesome.com/b3674b136c.js"
       crossorigin="anonymous"
@@ -33,14 +34,6 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
-    <script>
-      window.onload = function(){
-        let arrayFromStroage = JSON.parse(localStorage.getItem("CartList"));
-        let arrayLength = arrayFromStroage.length;
-        console.log(arrayLength);
-        document.getElementById('output').innerHTML = arrayLength;
-      };
-      </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -97,7 +90,6 @@
     </header>
     <main>
       <div class="shop" id="shop"></div>
-</div>
     </main>
     <footer></footer>
   </body>

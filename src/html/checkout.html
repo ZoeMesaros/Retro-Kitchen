@@ -7,6 +7,7 @@
     <title>Retro Kitchen</title>
     <link rel="stylesheet" href="/src/scss/_checkout.scss" />
     <script src="/src/ts/checkout.ts" defer></script>
+    <script src="/src/ts/main.ts"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -47,20 +48,15 @@
   </head>
   <body>
     <header>
-      <a href="/src/index.html"
-        ><img
-          class="retrologo"
-          src="/src/images/retrokitchen.png"
-          alt="Retro Kitchen"
+      <a href="/src/index.html"><img
+        class="retrologo"
+        src="/src/images/retrokitchen.png"
+        alt="Retro Kitchen"
       /></a>
-      <section class="cart">
-        <a href="/src/html/cart.html"
-          ><span class="cart__counter">0</span
-          ><i class="fa-solid fa-cart-shopping fa-xl"></i>
-          <p class="cart-text">Kundvagn</p></a
-        >
+      
+      <section class="cart"><a href="/src/html/cart.html"><span id="output" class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
       </section>
-      <!-- //*Mobile*\\ -->
+<!-- //*Mobile*\\ -->
       <nav role="navigation">
         <div id="menuToggle">
           <input type="checkbox" />
@@ -101,49 +97,64 @@
       <div class="form" id="formDiv">
         <h1>Kundvagn</h1>
         <form id="myForm">
-        <legend>Kundinformation</legend>
-        <div class="info-box">
-        <label class="firstName">Förnamn</label><br>
-        <input type="text" required="required" pattern="[A-Za-z]{1,20}" id="firstName"><br>
-        <label class="lastName">Efternamn</label><br>
-        <input type="text" required="required" pattern="[A-Za-z]{1,20}" id="lastName"><br>
-        <label class="adress">Adress</label><br>
-        <input type="text" required="required" id="adress"><br>
-        <label class="postal">Postnummer</label><br>
-        <input type="text" required="required" id="postal"><br>
-        <label class="city">Ort</label><br>
-        <input type="text" required="required" id="city"><br>
-      </div>
-      <h4>Välj betalsätt</h4>
-      <div class="info-box2">
-        <div class="options">
-        <input type="radio" id="payment" name="payment" value="Klarna"/>
-        <label for="radiobtn1">
-          <img src="/src/images/klarna.png"/>
-        </label>
-        <input type="radio" id="payment" name="payment" value="Paypal"/>
-        <label for="radiobtn2">
-          <img src="/src/images/paypal.png"/>
-        </label>
-        <input type="radio" id="payment" name="payment" value="Mastercard"/>
-        <label for="radiobtn3">
-          <img src="/src/images/mastercard.png"/>
-        </label>
-        <input type="radio" id="payment" name="payment" value="Visa"/>
-        <label for="radiobtn4">
-          <img src="/src/images/visa.png"/>
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="submit">
-      <span>Slutför köp</span>
-  </button>
-    </form>
+          <legend>Kundinformation</legend>
+          <div class="info-box">
+            <label class="firstName">Förnamn</label><br />
+            <input
+              type="text"
+              required="required"
+              pattern="[A-Za-z]{1,20}"
+              id="firstName"
+            /><br />
+            <label class="lastName">Efternamn</label><br />
+            <input
+              type="text"
+              required="required"
+              pattern="[A-Za-z]{1,20}"
+              id="lastName"
+            /><br />
+            <label class="adress">Adress</label><br />
+            <input type="text" required="required" id="adress" /><br />
+            <label class="postal">Postnummer</label><br />
+            <input type="text" required="required" id="postal" /><br />
+            <label class="city">Ort</label><br />
+            <input type="text" required="required" id="city" /><br />
+          </div>
+          <h4>Välj betalsätt</h4>
+          <div class="info-box2">
+            <div class="options">
+              <input type="radio" id="payment" name="payment" value="Klarna" />
+              <label for="radiobtn1">
+                <img src="/src/images/klarna.png" />
+              </label>
+              <input type="radio" id="payment" name="payment" value="Paypal" />
+              <label for="radiobtn2">
+                <img src="/src/images/paypal.png" />
+              </label>
+              <input
+                type="radio"
+                id="payment"
+                name="payment"
+                value="Mastercard"
+              />
+              <label for="radiobtn3">
+                <img src="/src/images/mastercard.png" />
+              </label>
+              <input type="radio" id="payment" name="payment" value="Visa" />
+              <label for="radiobtn4">
+                <img src="/src/images/visa.png" />
+              </label>
+            </div>
+          </div>
+          <button type="submit" class="submit">
+            <span>Slutför köp</span>
+          </button>
+        </form>
       </div>
       <div id="hiddenMessage" style="display: none">
-      <h1>Tack för ditt köp!</h1>
-      <h4>Gå tillbaka till <a href="/src/index.html">startsidan</a></h4>
-    </div>
+        <h1>Tack för ditt köp!</h1>
+        <h4>Gå tillbaka till <a href="/src/index.html">startsidan</a></h4>
+      </div>
     </main>
     <footer></footer>
   </body>

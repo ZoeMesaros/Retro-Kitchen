@@ -42,14 +42,6 @@
       href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap"
       rel="stylesheet"
     />
-    <script>
-      window.onload = function(){
-        let arrayFromStroage = JSON.parse(localStorage.getItem("CartList") || "[]");
-        let arrayLength = arrayFromStroage.length;
-        console.log(arrayLength);
-        document.getElementById('output').innerHTML = arrayLength;
-      };
-      </script>
   </head>
   <body>
     <header>
@@ -101,7 +93,7 @@
     <main>
       <div class="shopping-cart" id="shopping-cart"></div>
       <div>
-        <h3>Total summa: <span id="total"></span></h3>
+        <h3 class="sum">Total summa: <span id="total"></span> SEK</h3>
       </div>
     </main>
     <footer>
