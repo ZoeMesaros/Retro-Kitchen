@@ -104,10 +104,12 @@ body {
   }
 
   #hiddenMessage {
-    position: relative;
-    padding-top: 25%;
-    padding-left: 150px;
+    width: 80%;
+    text-align: center;
+    height: 100vh;
+    padding-top: 20%;
     h4 {
-      padding-left: 40px;
+      padding-top: 1%;
+      text-align: center;
     }
   }
