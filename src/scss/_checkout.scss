@@ -16,42 +16,40 @@ body {
   main {
     position: relative;
     max-width: 80%;
-    height: 100vh;
+    height: 120vh;
     padding-left: 15%;
     transform: translate(12%);
     background-color: white;
   }
 
+  #checkout-container {
+    top: 10%;
+    background-color: rgba(255, 166, 0, 0.795);
+    width: 80%;
+    height: 20%;
+  }
+
   h1 {
-    padding-left: 2%;
     padding-top: 5%;
-    background-color: orange;
+    padding-left: 2%;
   }
 
-  #checkout-cart {
-    position: absolute;
-    width: 90%;
-    height: 21%;
-    background-color: blue;
+  legend {
+    margin-left: 2%;
+    margin-top: 5%;
   }
 
-  #text-box {
-    display: none;
-    position: absolute;
-    width: 40%;
-    height: 50%;
-    background-color: orange;
-  }
-
-  #myForm {
-    padding-top: 15%;
+  .select-payment {
+    margin-top: 8%;
+    bottom: 255;
   }
 
   .info-box {
+     top: 38%;
     padding: 5%;
     background-color: rgb(226, 226, 226);
     margin-right: 20%;
-    border-radius: 5%;
+    border-radius: 15px;
     #firstName {
       width: 95%;
     }
@@ -70,10 +68,12 @@ body {
   }
 
   .info-box2 {
-    border-radius: 5%;
+    border-radius: 15px;
     margin-top: 2%;
     background-color: rgb(226, 226, 226);
     margin-right: 20%;
+    bottom: 12%;
+    min-height: 3%;
     .options {
       padding: 2%;
       display: flex;
@@ -93,18 +93,14 @@ body {
   }
   }
 
-  h4 {
-    padding-top: 5%;
-  }
-
   .submit {
-   text-align: center;
-   background-color: rgb(221, 221, 221);
+   background-color: rgb(245, 245, 245);
    border: 2px solid black;
    border-radius: 10px;
    padding: 10px;
+   margin-top: 15%;
    width: 50%;
-   transform: translateY(80%) translateX(30%);
+   transform: translateX(25%);
   }
 
   #hiddenMessage {

@@ -95,8 +95,9 @@
     </header>
     <main>
       <div class="form" id="formDiv">
-        <h1>Kundvagn</h1>
         <form id="myForm">
+          <h1>Kundvagn</h1>
+          <div id="checkout-container"></div>
           <legend>Kundinformation</legend>
           <div class="info-box">
             <label class="firstName">Förnamn</label><br />
@@ -120,7 +121,7 @@
             <label class="city">Ort</label><br />
             <input type="text" required="required" id="city" /><br />
           </div>
-          <h4>Välj betalsätt</h4>
+          <h4 class="select-payment">Välj betalsätt</h4>
           <div class="info-box2">
             <div class="options">
               <input type="radio" id="payment" name="payment" value="Klarna" />
