@@ -4,15 +4,13 @@
 @use "navigation";
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
-body { 
-    min-height: 100vh;
-    width: 100%;
-    background-image: url(/src/images/background-boomerang.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
-
+body {
+  min-height: 100vh;
+  width: 100%;
+  background-image: url(/src/images/background-boomerang.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   main {
     position: relative;
     max-width: 80%;
@@ -20,89 +18,80 @@ body {
     padding-left: 15%;
     transform: translate(12%);
     background-color: white;
-  }
-
-  #checkout-container {
-    top: 10%;
-    background-color: rgba(255, 166, 0, 0.795);
-    width: 80%;
-    height: 20%;
-  }
-
-  h1 {
-    padding-top: 5%;
-    padding-left: 2%;
-  }
-
-  legend {
-    margin-left: 2%;
-    margin-top: 5%;
-  }
-
-  .select-payment {
-    margin-top: 8%;
-    bottom: 255;
-  }
-
-  .info-box {
-     top: 38%;
-    padding: 5%;
-    background-color: rgb(226, 226, 226);
-    margin-right: 20%;
-    border-radius: 15px;
-    #firstName {
-      width: 95%;
+    h1 {
+      padding-top: 5%;
+      padding-left: 2%;
     }
-    #lastName {
-      width: 95%;
+    #checkout-container {
+      top: 10%;
+      background-color: rgba(255, 166, 0, 0.795);
+      width: 80%;
+      height: 20%;
     }
-    #adress {
-      width: 95%;
+    legend {
+      margin-left: 2%;
+      margin-top: 5%;
     }
-    #postal {
-      width: 95%;
-    }
-    #city {
-      width: 95%;
-    }
-  }
-
-  .info-box2 {
-    border-radius: 15px;
-    margin-top: 2%;
-    background-color: rgb(226, 226, 226);
-    margin-right: 20%;
-    bottom: 12%;
-    min-height: 3%;
-    .options {
-      padding: 2%;
-      display: flex;
-      justify-content: center;
-      justify-content: space-evenly;
-      align-items: center;
-      label {
-        width: 15%;
+    .info-box {
+      top: 38%;
+      padding: 5%;
+      background-color: rgb(226, 226, 226);
+      margin-right: 20%;
+      border-radius: 15px;
+      #firstName {
+        width: 95%;
+      }
+      #lastName {
+        width: 95%;
+      }
+      #adress {
+        width: 95%;
+      }
+      #postal {
+        width: 95%;
+      }
+      #city {
+        width: 95%;
       }
     }
-   #payment {
-    height: 20%;
-
-   }
-   img {
-    width: 60%;
+    .select-payment {
+      margin-top: 8%;
+      bottom: 255;
+    }
+    .info-box2 {
+      border-radius: 15px;
+      margin-top: 2%;
+      background-color: rgb(226, 226, 226);
+      margin-right: 20%;
+      bottom: 12%;
+      min-height: 3%;
+      .options {
+        padding: 2%;
+        display: flex;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        label {
+          width: 15%;
+        }
+      }
+      #payment {
+        height: 20%;
+      }
+      img {
+        width: 60%;
+      }
+    }
+    .submit {
+      background-color: rgb(245, 245, 245);
+      border: 2px solid black;
+      border-radius: 10px;
+      padding: 10px;
+      margin-top: 15%;
+      width: 50%;
+      transform: translateX(25%);
+    }
   }
-  }
-
-  .submit {
-   background-color: rgb(245, 245, 245);
-   border: 2px solid black;
-   border-radius: 10px;
-   padding: 10px;
-   margin-top: 15%;
-   width: 50%;
-   transform: translateX(25%);
-  }
-
   #hiddenMessage {
     width: 80%;
     text-align: center;
@@ -113,3 +102,4 @@ body {
       text-align: center;
     }
   }
+}

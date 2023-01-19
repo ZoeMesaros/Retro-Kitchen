@@ -13,20 +13,6 @@ body {
   background-size: cover;
 }
 
-.sale {
-  color: rgb(253, 10, 10);
-  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.651);
-  font-size: 1.5rem;
-  font-family: "Kaushan Script", cursive;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  text-align: center;
-  @include m.md {
-    padding-top: 70px;
-    font-size: 3rem;
-  }
-}
-
 .white-bg {
   display: flex;
   justify-content: center;

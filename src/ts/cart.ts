@@ -37,10 +37,12 @@ for (let index = 0; index < storedProducts.length; index++) {
     cartItem.appendChild(productName);
 
     let amountName = document.createElement('p');
+    amountName.classList.add('amount');
     amountName.innerHTML = `Antal`;
     cartItem.appendChild(amountName);
 
     let productPrice = document.createElement("h3");
+    productPrice.classList.add('price');
     productPrice.innerHTML = `${product.product.price * product.amount} SEK`;
     cartItem.appendChild(productPrice);
 
