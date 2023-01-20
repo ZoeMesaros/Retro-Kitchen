@@ -39,11 +39,14 @@ function openModal(id: string) {
     header.innerHTML = `${modalItems.name}`;
     document.body.appendChild(header);
 
+    let colorChoice = document.createElement("select") as HTMLSelectElement;
+    colorChoice.classList.add('choice');
+    document.body.appendChild(colorChoice);
+
     let addButton = document.createElement("button") as HTMLButtonElement;
     addButton.classList.add("addToCart");
     addButton.innerHTML = `Lägg till i varukorgen`;
     document.body.appendChild(addButton);
-
 
     let descContainer = document.createElement("div") as HTMLDivElement;
     descContainer.classList.add("descContainer");
@@ -54,9 +57,17 @@ function openModal(id: string) {
     modalImg.classList.add("modalImg");
     modalImg.src = `${modalItems.img}`;
 
+    for (let i = 0; i < shopItemsData.length; i++) {
+        let option = document.createElement("option") as HTMLOptionElement;
+        option.value = "Färg";
+        option.text = shopItemsData[i].colorTypes.Id;
+        colorChoice.appendChild(option);
+    }
+
     modalList.appendChild(modalImg);
     modalList.appendChild(descContainer);
-    modalList.appendChild(addButton)
+    modalList.appendChild(colorChoice);
+    modalList.appendChild(addButton);
     modalList.appendChild(header);
     modalList.appendChild(closeModal);
     shop.appendChild(modalList);
