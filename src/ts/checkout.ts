@@ -1,37 +1,36 @@
 const checkoutCart = JSON.parse(localStorage.getItem('CartList') as string);
 let checkoutContainer = document.getElementById('checkout-container') as HTMLDivElement;
 
-
 for (let i = 0; i < checkoutCart.length; i++) {
   const shopItems = checkoutCart[i];
   let shopList = document.createElement("div") as HTMLDivElement;
   shopList.classList.add("product-card");
-  document.body.appendChild(shopList);
+  checkoutContainer.appendChild(shopList);
 
   let shopImg = document.createElement("img") as HTMLImageElement;
   shopImg.classList.add("productImg");
-  shopImg.src = `${shopItems.img}`;
-  document.body.appendChild(shopImg);
+  shopImg.src = `${shopItems.product.img}`;
+  shopList.appendChild(shopImg);
 
   let imgChoice = document.createElement("div") as HTMLDivElement;
   imgChoice.classList.add("colorChoice");
-  document.body.appendChild(imgChoice);
+  shopList.appendChild(imgChoice);
 
   for (let i = 0; i < shopItems.colors.length; i++) {
     const element = shopItems.colors[i];
     let colors = document.createElement("img") as HTMLImageElement;
     colors.classList.add("colors");
     colors.src = `${element}`;
-    imgChoice.appendChild(colors);
+    shopList.appendChild(colors);
   }
 
   let shopName = document.createElement("h3");
   shopName.innerHTML = `${shopItems.name}`;
-  document.body.appendChild(shopName);
+  shopList.appendChild(shopName);
 
   let shopPrice = document.createElement("h2");
   shopPrice.innerHTML = `${shopItems.price} kr`;
-  document.body.appendChild(shopPrice);
+  shopList.appendChild(shopPrice);
 
   shopList.appendChild(shopImg);
   shopList.appendChild(imgChoice);

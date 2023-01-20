@@ -7,16 +7,20 @@ const shopItemsData = [
     img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(bla).png",
     colors: [
       "/blue.png",
-      "/green.png",
       "/beige.png",
     ],
     colorTypes: [
-      { id: "ariete-coffee-green", 
+      { id: "ariete-coffee-green",
+      name: "Grön", 
+      choice: "/green.png",
       img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(gron).png" },
       {
         id: "ariete-coffee-beige",
         img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(beige).png",
       },
+      {
+        name: "blå"
+      }
     ],
   },
   {
