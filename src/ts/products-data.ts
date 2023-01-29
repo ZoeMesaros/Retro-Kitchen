@@ -1,78 +1,94 @@
 const shopItemsData = [
     {
-    id: "ariete-coffee-blue",
+    id: "ariete-coffee",
     name: "Ariete kaffebryggare",
     price: 500,
     desc: "Ariete kaffebryggare håller ditt nybryggda kaffe varmt längre. Välj själv när du vill att ditt kaffe ska vara klart och njut av den coola retrodesignen.",
     img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(bla).png",
-    colors: [
-      "/blue.png",
-      "/beige.png",
-    ],
     colorTypes: [
       { id: "ariete-coffee-green",
       name: "Grön", 
       choice: "/green.png",
       img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(gron).png" },
       {
-        id: "ariete-coffee-beige",
+        id: "ariete-coffee-blue",
+        name: "blå",
+        choice: "/beige.png",
         img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(beige).png",
       },
-      {
-        name: "blå"
-      }
-    ],
+      { 
+      id: "ariete-coffee-green",
+      name: "Grön", 
+      choice: "/green.png",
+      img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(gron).png" 
+    }
+    ]
   },
   {
-    id: "ariete-espresso-blue",
+    id: "ariete-espresso",
     name: "Ariete espressomaskin",
     price: 1200,
     desc: "Skäm bort dig själv med ett riktigt gott kaffe. Ariete Vintage espressomaskin har manuell funktion, 0,9 liters vattentank, 15 bars tryck och mjölkskummare som låter dig njuta av goda espressos och cappuccinos varje dag.",
     img: "/brands/ariete/espresso/ariete-espressomaskin(bla).png",
-    colors: [    
-        "/blue.png",
-        "/green.png",
-        "/beige.png",],
     colorTypes: [
-      { id: "ariete-espresso-green", 
-      img: "/brands/ariete/coffee/ariete-vintage-kaffebryggare-(gron).png" },
       {
-        id: "ariete-espresso-beige",
+        id: "ariete-espresso-blue",
+        name: "Blå",
+        choice: "/blue.png",
         img: "/brands/ariete/espresso/ariete-espressomaskin(beige).jpg",
       },
+      { id: "ariete-espresso-green", 
+      name: "Grön",
+      choice: "/green.png",
+      img: "/brands/ariete/espresso/ariete-espressomaskin(gron).jpg" }
+      {
+        id: "ariete-espresso-beige",
+        name: "Beige",
+        choice: "/beige.png",
+        img: "/brands/ariete/espresso/ariete-espressomaskin(beige).jpg",
+      }
     ]
   },
   {
-    id: "ariete-toaster-blue",
+    id: "ariete-toaster",
     name: "Ariete brödrost",
     price: 450,
     desc: "Charmiga Ariete Vintage brödrost kommer med 6 effektlägen, Defrost, Re-heat, cancel-funktion, auto-eject samt löstagbar låda för smulor så du kan njuta av en riktigt god toast till frukosten.",
     img: "/brands/ariete/toaster/ariete-brodrost(bla).png",
-    colors: [    
-        "/blue.png",
-        "/green.png",
-        "/beige.png",],
     colorTypes: [
-      { id: "ariete-toaster-green", 
+      { id: "ariete-toaster-green",
+      name: "Grön",
+      choice: "/green.png",
       img: "/brands/ariete/toaster/ariete-brodrost(gron).jpg" },
       {
+        id: "ariete-toaster-blue",
+        name: "Blå",
+        choice: "/blue.png",
+        img: "/brands/ariete/toaster/ariete-brodrost(beige).png",
+      },
+      {
         id: "ariete-toaster-beige",
+        name: "Beige",
+        choice: "/beige.png",
         img: "/brands/ariete/toaster/ariete-brodrost(beige).png",
       },
     ]
   },
   {
-    id: "ariete-toaster-x4-green",
+    id: "ariete-toaster-x4",
     name: "Ariete brödrost 4 skivor",
     price: 800,
     desc: "Med denna brödrost i vintage-design från Ariete kan du njuta av rostat bröd varje morgon. Brödrosten har plats till 4 skivor bröd och flera inställningar som gör att du rostar brödet precis efter dina preferenser. Den fina vintage-designen passar i det moderna, såväl som i det klassiska köket och rosten finns i olika färger, vilket gör att du kan välja den som passar bäst hos just dig.",
     img: "/brands/ariete/toaster-x4/ariete-brodrost-x4(gron).png",
-    colors: [    
-        "/blue.png",
-        "/green.png",
-        "/beige.png",],
     colorTypes: [
-      { id: "ariete-toaster-x4-green", 
+      { id: "ariete-toaster-x4-green",
+      name: "Grön",
+      choice: "/green.png"
+      img: "/brands/ariete/toaster-x4/ariete-brodrost-x4(gron).png"
+    }
+      { id: "ariete-toaster-x4-blue",
+      name: "Blå",
+      choice: "/blue.png",
       img: "/brands/ariete/toaster-x4/ariete-brodrost-x4(bla).png" },
       {
         id: "ariete-toaster-x4-beige",
