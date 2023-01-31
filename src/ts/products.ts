@@ -57,13 +57,13 @@ function openModal(id: string) {
     modalImg.classList.add("modalImg");
     modalImg.src = `${modalItems.img}`;
 
-   /*  for (let i = 0; i < shopItemsData.length; i++) {
+  /*   for (let i = 0; i < shopItemsData.length; i++) {
         let option = document.createElement("option") as HTMLOptionElement;
         option.value = "Färg";
-        option.text = shopItemsData[i].colorTypes.Id;
+        option.text = shopItemsData.colorTypes.Id;
         colorChoice.appendChild(option);
-    }
- */
+    } */
+
     modalList.appendChild(modalImg);
     modalList.appendChild(descContainer);
     modalList.appendChild(colorChoice);
@@ -118,12 +118,12 @@ for (let i = 0; i < shopItemsData.length; i++) {
   let imgChoice = document.createElement("div") as HTMLDivElement;
   imgChoice.classList.add("colorChoice");
   document.body.appendChild(imgChoice);
-
-/*   for (let i = 0; i < shopItems.colors.length; i++) {
-    const element = shopItems.colors[i];
+/* 
+  for (let i = 0; i < shopItemsData.length; i++) {
+    const colorChoice = shopItemsData.colorTypes.choice;
     let colors = document.createElement("img") as HTMLImageElement;
     colors.classList.add("colors");
-    colors.src = `${element}`;
+    colors.src = `${colorChoice}`;
     imgChoice.appendChild(colors);
   } */
 

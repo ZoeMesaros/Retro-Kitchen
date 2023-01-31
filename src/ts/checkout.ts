@@ -12,57 +12,92 @@ for (let i = 0; i < checkoutCart.length; i++) {
   shopImg.src = `${shopItems.product.img}`;
   shopList.appendChild(shopImg);
 
-  let imgChoice = document.createElement("div") as HTMLDivElement;
-  imgChoice.classList.add("colorChoice");
-  shopList.appendChild(imgChoice);
-
-  for (let i = 0; i < shopItems.colors.length; i++) {
-    const element = shopItems.colors[i];
-    let colors = document.createElement("img") as HTMLImageElement;
-    colors.classList.add("colors");
-    colors.src = `${element}`;
-    shopList.appendChild(colors);
-  }
-
   let shopName = document.createElement("h3");
-  shopName.innerHTML = `${shopItems.name}`;
+  shopName.innerHTML = `${shopItems.product.name}`;
+  shopName.classList.add("productName")
   shopList.appendChild(shopName);
 
-  let shopPrice = document.createElement("h2");
-  shopPrice.innerHTML = `${shopItems.price} kr`;
-  shopList.appendChild(shopPrice);
+  let amountName = document.createElement('p');
+  amountName.classList.add('amount');
+  amountName.innerHTML = `Antal`;
+ shopList.appendChild(amountName);
 
-  shopList.appendChild(shopImg);
-  shopList.appendChild(imgChoice);
-  shopList.appendChild(shopName);
-  shopList.appendChild(shopPrice);
-  checkoutContainer.appendChild(shopList);
-}
+  let productPrice = document.createElement("h3");
+  productPrice.classList.add('price');
+  productPrice.innerHTML = `${shopItems.product.price * shopItems.product.amount} SEK`;
+  shopList.appendChild(productPrice);
 
-/* import { CartItem } from "./products";
-import { checkoutCart } from "./products-data";
+  let selectAmount = document.createElement("select") as HTMLSelectElement;
+  selectAmount.classList.add('choice');
+  shopList.appendChild(selectAmount);
 
-let checkoutContainer: HTMLDivElement = document.getElementById("checkout-container") as HTMLDivElement
+selectAmount.selectedIndex = shopItems.product.amount;
 
-function createHtmlForCheckout() {
-    checkoutContainer.innerHTML = "";
-  
-    let cartFromLS: string = localStorage.getItem("CartList") || "[]";
-    let productCartList: CartItem{} = JSON.parse(cartFromLS);
-  
-    for (let i = 0; productCartList.length; i++) {
-      let productImg: HTMLImageElement = document.createElement("img");
-      let productTitle: HTMLHeadElement = document.createElement("h1");
-      let productPrice: HTMLParagraphElement = document.createElement("p");
-      let minusButton: HTMLButtonElement = document.createElement("button");
-      let plusButton: HTMLButtonElement = document.createElement("button");
-      let totalAmount: HTMLParagraphElement = document.createElement("p");
-  
-        productImg.src = productCartList[i].product
-        productTitle.innerHTML = productCartList[i].product.
-  
+// Update product
+selectAmount.addEventListener("change", () => {
+    if(selectAmount.selectedIndex == 0) {
+        const ingredientIndex = storedProducts.findIndex((item: any) => item.id === shopItems.product.id);
+        storedProducts.splice(ingredientIndex, 1);
+        
+        cartIconValue.innerHTML = storedProducts.length;
+
+        shopList.remove()
+
+        localStorage.setItem("CartList", JSON.stringify(storedProducts));
     }
-  } */
+
+    shopItems.product.amount = selectAmount.selectedIndex;
+    let totalAmount = 0;
+
+    productPrice.innerHTML = `${shopItems.product.amount * shopItems.product.product.price} SEK`;
+    // loop and multiply with amount
+    for(var i of storedProducts){
+        var multiplyWithAmount = i.amount * i.product.price
+        totalAmount += multiplyWithAmount;           
+        }
+
+        // Updates and removes previus sum
+        while( totalSum.firstChild ) {
+        totalSum.removeChild( totalSum.firstChild );
+    }
+    
+    totalSum.appendChild( document.createTextNode(totalAmount.toString()) );
+
+    localStorage.setItem("CartList", JSON.stringify(storedProducts));
+
+})
+
+  let removeItemButton = document.createElement("button") as HTMLButtonElement;
+  removeItemButton.classList.add("remove");
+  removeItemButton.innerHTML = `Radera`;
+
+  removeItemButton.addEventListener("click", () => {
+      
+      const ingredientIndex = storedProducts.findIndex((item: any) => item.id === shopItems.product.id);
+      storedProducts.splice(ingredientIndex, 1);
+      
+      cartIconValue.innerHTML = storedProducts.length;
+
+      shopList.remove()
+
+      let totalAmount = 0;
+      
+      for(var i of storedProducts){
+        var multiplyWithAmount = i.amount * i.product.price
+        totalAmount += multiplyWithAmount;
+        
+        }
+    while( totalSum.firstChild ) {
+        totalSum.removeChild( totalSum.firstChild );
+    }
+    
+    totalSum.appendChild( document.createTextNode(totalAmount.toString()) );
+
+    localStorage.setItem("CartList", JSON.stringify(storedProducts));
+  
+})
+shopList.appendChild(removeItemButton);
+}
 
   let myForm = document.getElementById("myForm") as HTMLFormElement;
   myForm.addEventListener("submit", function(e) {

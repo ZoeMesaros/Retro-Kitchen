@@ -18,15 +18,93 @@ body {
     padding-left: 15%;
     transform: translate(12%);
     background-color: white;
+    #checkout-container {
+      background-color: rgba(0, 81, 255, 0.795);
+      width: 80%;
+      height: 20%;
+      .product-card {
+        position: relative;
+        width: 100%;
+        height: 35%;
+        background-color: orange;
+        border-bottom: 2px solid #fdb6fd;
+        .productImg {
+          position: absolute;
+          display: flex;
+          max-width: 80px;
+          top: 12%;
+          left: 2%;
+        }
+        .productName {
+          position: absolute;
+          top: 45%;
+          left: 20%;
+          @include m.sm {
+            font-size: 15px;
+          }
+        }
+        .amount {
+          position: absolute;
+          top: 45%;
+          left: 60%;
+          @include m.sm {
+            display: none;
+            left: 54%;
+            font-size: 12px;
+          }
+          @include m.md {
+            display: inline;
+            left: 52%;
+          }
+        }
+        .productPrice {
+          position: absolute;
+          font-size: 20px;
+          top: 45%;
+          left: 88%;
+        }
+        .choice {
+          position: absolute;
+          top: 45%;
+          left: 65%;
+          @include m.sm {
+            left: 65%;
+            height: 23%;
+            font-size: 50%;
+          }
+          @include m.md {
+            left: 60%;
+            height: 24%;
+            font-size: 80%;
+          }
+        }
+        .remove {
+          position: absolute;
+          background-color: rgb(241, 241, 241);
+          border-radius: 4px;
+          border: 1px solid black;
+          width: 8%;
+          height: 24%;
+          font-size: 15px;
+          top: 45%;
+          left: 70%;
+          @include m.sm {
+            font-size: 60%;
+            width: 10%;
+            left: 75%;
+          }
+          @include m.md {
+            left: 67%;
+            font-size: 80%;
+            width: 7%;
+            left: 70%;
+          }
+        }
+      }
+    }
     h1 {
       padding-top: 5%;
       padding-left: 2%;
-    }
-    #checkout-container {
-      top: 10%;
-      background-color: rgba(255, 166, 0, 0.795);
-      width: 65%;
-      height: 20%;
     }
     legend {
       margin-left: 2%;
