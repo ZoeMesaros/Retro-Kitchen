@@ -370,6 +370,7 @@ const shopItemsData = [
     id: "smeg-fridge-special",
     name: "Smeg kylskåp Coca Cola",
     choice: "/red.png",
+    type: "new",
     price: 25000,
     desc: "Lägg till en uppfriskande accent till ditt kök med ett retro Smeg-kylskåp, som kommer i ett elegant Enjoy a Coke-tema. Detta fristående kylskåp erbjuder en 244-liters volym med ett Multiflow-system för pålitlig långtidsförvaring av dina matvaror.",
     img: "/brands/smeg/fridge/smeg-fristaende-kylskap-special.png",
