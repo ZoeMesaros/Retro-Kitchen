@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Retro Kitchen</title>
     <link rel="stylesheet" href="/src/scss/_checkout.scss" />
+    <script src="/src/ts/main.ts" defer></script>
     <script src="/src/ts/checkout.ts" defer></script>
-    <script src="/src/ts/main.ts"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -48,20 +48,15 @@
   </head>
   <body>
     <header>
-      <a href="/src/index.html"
-        ><img
-          class="retrologo"
-          src="/src/images/retrokitchen.png"
-          alt="Retro Kitchen"
+      <a href="/src/index.html"><img
+        class="retrologo"
+        src="/src/images/retrokitchen.png"
+        alt="Retro Kitchen"
       /></a>
-
-      <section class="cart">
-        <a href="/src/html/cart.html"
-          ><span id="output" class="cart__counter">0</span
-          ><i class="fa-solid fa-cart-shopping fa-xl"></i>
-          <p class="cart-text">Kundvagn</p></a
-        >
+      
+      <section class="cart"><a href="/src/html/cart.html"><span id="output" class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
       </section>
+<!-- //*Mobile*\\ -->
       <!-- //*Mobile*\\ -->
       <nav role="navigation">
         <div id="menuToggle">
@@ -102,6 +97,7 @@
     <main>        
       <h1>Kundvagn</h1>
       <div id="checkout-container"></div>
+      <h3 class="sum">Total summa: <span id="total"></span> SEK</h3>
       <div class="form" id="formDiv">
         <form id="myForm">
           <legend>Kundinformation</legend>
