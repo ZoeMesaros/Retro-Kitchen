@@ -1,6 +1,7 @@
 const checkoutCart = JSON.parse(localStorage.getItem('CartList') as string);
 let checkoutContainer = document.getElementById('checkout-container') as HTMLDivElement;
 
+
 for (let i = 0; i < checkoutCart.length; i++) {
   const shopItems = checkoutCart[i];
   let shopList = document.createElement("div") as HTMLDivElement;
@@ -30,6 +31,7 @@ for (let i = 0; i < checkoutCart.length; i++) {
   let selectAmount = document.createElement("select") as HTMLSelectElement;
   selectAmount.classList.add('choice');
   shopList.appendChild(selectAmount);
+  
 
 selectAmount.selectedIndex = shopItems.product.amount;
 
@@ -110,5 +112,3 @@ shopList.appendChild(removeItemButton);
       myForm.e.submit()
     }, 2000)
   }) 
-
-
