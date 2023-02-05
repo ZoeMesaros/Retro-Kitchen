@@ -18,32 +18,25 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  min-height: 1000px;
+  height: 120vh;
   width: 80%;
   transform: translateX(12%);
   background-color: white;
   @include m.sm {
-    max-height: 1200px;
-    transform: translateX(12%);
+    height: 95vh;
   }
   @include m.md {
-    min-height: 1250px;
-    transform: translateY(2.7%) translateX(12%);
+    margin-top: 5%;
+    height: 120vh;
   }
   @include m.lg {
-    min-height: 1600px;
-     transform: translateX(12%);
+    margin-top: 0%;
+    height: 140vh;
   }
   .carousel-feature {
     position: absolute;
     width: 70%;
     top: 2%;
-    @include m.sm {
-    }
-    @include m.sm {
-    }
-    @include m.lg {
-    }
     .carousel-control-prev {
       left: -60px;
     }
