@@ -92,7 +92,7 @@ selectAmount.addEventListener("change", () => {
       
       cartIconValue.innerHTML = checkoutCart.length;
 
-      shopList.remove()
+      shopList.remove();
 
       let totalAmount = 0;
       
