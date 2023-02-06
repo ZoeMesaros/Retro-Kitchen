@@ -31,7 +31,7 @@ body {
   }
   @include m.lg {
     margin-top: 0%;
-    height: 140vh;
+    height: 182vh;
   }
   .carousel-feature {
     position: absolute;
@@ -72,7 +72,7 @@ body {
         font-size: 20px;
       }
       @include m.lg {
-        font-size: 20px;
+        font-size: 25px;
       }
     }
     .main-img {
@@ -123,7 +123,7 @@ body {
       font-size: 20px;
     }
     @include m.lg {
-      font-size: 20px;
+      font-size: 25px;
     }
   }
   .main-img2 {
