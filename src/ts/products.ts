@@ -1,6 +1,6 @@
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
-let cartlist:any[] = JSON.parse(localStorage.getItem('CartList') as string);
+let cartlist: any[] = JSON.parse(localStorage.getItem("CartList") as string);
 cartIcon.innerHTML = cartlist.length.toString();
 class CartItem {
   product: {};
@@ -16,7 +16,7 @@ function openModal(id: string) {
   for (let i = 0; i < shopItemsData.length; i++) {
     const modalItems = shopItemsData[i];
     if (modalItems.id !== id) {
-      continue
+      continue;
     }
     let modalList = document.createElement("div") as HTMLDivElement;
     modalList.classList.add("modalBg");
@@ -24,44 +24,34 @@ function openModal(id: string) {
 
     modalList.style.display = "block";
 
-    function ModalCloseFunction () {
+    function ModalCloseFunction() {
       modalList.style.display = "none";
     }
 
+    modalList.innerHTML = `
+  <h1 class="header">${modalItems.name}</h1>
+  <img class="modalImg" src ="${modalItems.img}">
+  <section class="descContainer">${modalItems.desc}</section>
+
+  `;
+
     let closeModal = document.createElement("span") as HTMLSpanElement;
     closeModal.classList.add("close"[0]);
-    closeModal.innerHTML= `&times`
+    closeModal.innerHTML = `&times`;
     document.body.appendChild(closeModal);
-    closeModal.addEventListener("click", ModalCloseFunction)
-
-    let header = document.createElement("h1");
-    header.classList.add("header");
-    header.innerHTML = `${modalItems.name}`;
-    document.body.appendChild(header);
+    closeModal.addEventListener("click", ModalCloseFunction);
 
     let addButton = document.createElement("button") as HTMLButtonElement;
     addButton.classList.add("addToCart");
     addButton.innerHTML = `Lägg till i varukorgen`;
     document.body.appendChild(addButton);
 
-    let descContainer = document.createElement("div") as HTMLDivElement;
-    descContainer.classList.add("descContainer");
-    descContainer.innerHTML = `${modalItems.desc}`;
-    document.body.appendChild(descContainer);
-
-    let modalImg = document.createElement("img") as HTMLImageElement;
-    modalImg.classList.add("modalImg");
-    modalImg.src = `${modalItems.img}`;
-
-    modalList.appendChild(modalImg);
-    modalList.appendChild(descContainer);
     modalList.appendChild(addButton);
-    modalList.appendChild(header);
     modalList.appendChild(closeModal);
     shop.appendChild(modalList);
 
     //Lägg till produkt
-    let cartItems = new CartItem(modalItems, 1)
+    let cartItems = new CartItem(modalItems, 1);
 
     addButton.addEventListener("click", () => {
       let found = false;
@@ -76,15 +66,15 @@ function openModal(id: string) {
       }
       if (found) {
         if (cartlist[foundItemIndex].amount < 3) {
-          cartlist[foundItemIndex].amount += 1
+          cartlist[foundItemIndex].amount += 1;
         }
       } else {
         cartlist.push(cartItems);
       }
-            
+
       cartIcon.innerHTML = cartlist.length.toString();
-      
-      localStorage.setItem("CartList", JSON.stringify(cartlist))
+
+      localStorage.setItem("CartList", JSON.stringify(cartlist));
     });
   }
 }
@@ -96,29 +86,11 @@ for (let i = 0; i < shopItemsData.length; i++) {
   shopList.addEventListener("click", () => {
     openModal(shopItems.id);
   });
-  document.body.appendChild(shopList);
-
-  let shopImg = document.createElement("img") as HTMLImageElement;
-  shopImg.classList.add("productImg");
-  shopImg.src = `${shopItems.img}`;
-  document.body.appendChild(shopImg);
-
-  let imgChoice = document.createElement("div") as HTMLDivElement;
-  imgChoice.classList.add("colorChoice");
-  document.body.appendChild(imgChoice);
-
-
-  let shopName = document.createElement("h3");
-  shopName.innerHTML = `${shopItems.name}`;
-  document.body.appendChild(shopName);
-
-  let shopPrice = document.createElement("h2");
-  shopPrice.innerHTML = `${shopItems.price} kr`;
-  document.body.appendChild(shopPrice);
-
-  shopList.appendChild(shopImg);
-  shopList.appendChild(imgChoice);
-  shopList.appendChild(shopName);
-  shopList.appendChild(shopPrice);
-  shop.appendChild(shopList);
+  shopList.innerHTML = `
+  <img class ="productImg" src ="${shopItems.img}">
+  <section class ="colorChoice"></section>
+  <h3>${shopItems.name}</h3>
+  <h2>${shopItems.price} SEK</h2>
+  `;
+  shop.append(shopList);
 }
