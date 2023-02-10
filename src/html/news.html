@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="/src/scss/_news.scss" />
     <script src="/src/ts/main.ts" defer></script>
     <script src="/src/ts/news.ts"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/b3674b136c.js"
       crossorigin="anonymous"
@@ -44,47 +47,51 @@
     />
   </head>
   <body>
-    <header>
-      <a href="/src/index.html"><img
-        class="retrologo"
-        src="/src/images/retrokitchen.png"
-        alt="Retro Kitchen"
+    <header class="mainHeader">
+      <a href="/src/index.html"
+        ><img
+          class="retrologo"
+          src="/src/images/retrokitchen.png"
+          alt="Retro Kitchen"
       /></a>
-      <section class="cart"><a href="/src/html/cart.html"><span id="output" class="cart__counter">0</span><i class="fa-solid fa-cart-shopping fa-xl"></i><p class="cart-text">Kundvagn</p></a>
+      <section class="cart">
+        <a href="/src/html/cart.html"
+          ><span id="output" class="cart__counter">0</span
+          ><i class="fa-solid fa-cart-shopping fa-xl"></i>
+          <p class="cart-text">Kundvagn</p></a
+        >
       </section>
-<!-- //*Mobile*\\ -->
-<nav role='navigation'>
-  <div id="menuToggle">
-    <input type="checkbox" />
-    <ul id="menu">
-      <a href="/src/html/products.html">
-        <li>Alla produkter</li>
-      </a>
-      <a href="/src/html/products.html">
-        <li>Köksmaskiner</li>
-      </a>
-      <a href="/src/html/products.html">
-        <li>Vitvaror</li>
-      </a>
-      <a href="/src/html/about.html">
-        <li>Om oss</li>
-      </a>
-      <a href="/src/html/contact.html">
-        <li>Kontakt</li>
-      </a>
-    </ul>
-  </div>
-</nav>
-<!-- //*Desktop*\\ -->
-<nav class="desktop">
-  <ul class="desktop__list">
-    <li><a href="/src/index.html">Start</a></li>
-    <li><a href="/src/index.html">Nyheter</a></li>
-    <li><a href="/src/html/products.html">Sortiment</a></li>
-    <li><a href="/src/html/about.html">Om oss</a></li>
-    <li><a href="/src/html/contact.html">Kontakt</a></li>
-  </ul>
-</nav>
+      <!--  <nav role="navigation">
+        <div id="menuToggle">
+          <input type="checkbox" />
+          <ul id="menu">
+            <a href="/src/html/products.html">
+              <li>Alla produkter</li>
+            </a>
+            <a href="/src/html/products.html">
+              <li>Köksmaskiner</li>
+            </a>
+            <a href="/src/html/products.html">
+              <li>Vitvaror</li>
+            </a>
+            <a href="/src/html/about.html">
+              <li>Om oss</li>
+            </a>
+            <a href="/src/html/contact.html">
+              <li>Kontakt</li>
+            </a>
+          </ul>
+        </div>
+      </nav>
+      <nav class="desktop">
+        <ul class="desktop__list">
+          <li><a href="/src/index.html">Start</a></li>
+          <li><a href="/src/index.html">Nyheter</a></li>
+          <li><a href="/src/html/products.html">Sortiment</a></li>
+          <li><a href="/src/html/about.html">Om oss</a></li>
+          <li><a href="/src/html/contact.html">Kontakt</a></li>
+        </ul>
+      </nav> -->
     </header>
     <main>
       <div id="news"></div>
