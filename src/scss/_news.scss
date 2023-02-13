@@ -4,17 +4,24 @@
 @use "navigation";
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
-body { 
-    min-height: 100vh;
-    width: 100%;
-    background: url(/src/images/background-boomerang.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+body {
+  min-height: 100vh;
+  width: 100%;
+  background: url(/src/images/background-boomerang.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
-  #newsContainer {
-    width: 20%;
-    height: 30%;
-    background-color: red;
-  }
+#news {
+  padding-top: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 120vh;
+  width: 80%;
+  background-repeat: no-repeat;
+  transform: translateX(12%);
+  background-color: rgb(240, 9, 9);
+}
