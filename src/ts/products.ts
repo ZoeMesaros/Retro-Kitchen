@@ -1,7 +1,6 @@
 let shop = document.getElementById("shop") as HTMLDivElement;
 let cartIcon = document.getElementById("output") as HTMLDivElement;
 let cartlist: any[] = JSON.parse(localStorage.getItem("CartList") as string);
-cartIcon.innerHTML = cartlist.length.toString();
 class CartItem {
   product: {};
   amount: number;
@@ -72,7 +71,14 @@ function openModal(id: string) {
         cartlist.push(cartItems);
       }
 
-      cartIcon.innerHTML = cartlist.length.toString();
+      let productCount = 0;
+
+      for (let k = 0; k < cartlist.length; k++) {
+        const product = cartlist[k];
+        productCount += product.amount;
+      }
+
+      cartIcon.innerHTML = productCount.toString();
 
       localStorage.setItem("CartList", JSON.stringify(cartlist));
     });

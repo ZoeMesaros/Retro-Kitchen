@@ -4,11 +4,18 @@ let header = document.querySelector(".mainHeader") as HTMLHeadElement;
 window.onload = function () {
   let arrayFromStroage = JSON.parse(localStorage.getItem("CartList") || "[]");
   let arrayLength = arrayFromStroage.length;
-  cartNumber.innerHTML = arrayLength;
-};
+  6;
+  let productCount = 0;
 
-let navSection = document.createElement("section") as HTMLElement;
-navSection.innerHTML = `
+  for (let j = 0; j < arrayFromStroage.length; j++) {
+    const product = arrayFromStroage[j];
+    productCount += product.amount;
+  }
+
+  cartNumber.innerHTML = productCount.toString();
+
+  let navSection = document.createElement("section") as HTMLElement;
+  navSection.innerHTML = `
   <nav role="navigation">
   <div id="menuToggle">
     <input type="checkbox" />
@@ -36,13 +43,14 @@ navSection.innerHTML = `
 </nav>
 <nav class="desktop">
   <ul class="desktop__list">
-    <li><a href="index.html">Start</a></li>
-    <li><a href="news.html">Nyheter</a></li>
-    <li><a href="products.html">Sortiment</a></li>
-    <li><a href="about.html">Om oss</a></li>
-    <li><a href="contact.html">Kontakt</a></li>
+    <li><a href="/index.html">Start</a></li>
+    <li><a href="/html/news.html">Nyheter</a></li>
+    <li><a href="/html/products.html">Sortiment</a></li>
+    <li><a href="/html/about.html">Om oss</a></li>
+    <li><a href="/html/contact.html">Kontakt</a></li>
   </ul>
 </nav>
   `;
 
-header.append(navSection);
+  header.append(navSection);
+};
