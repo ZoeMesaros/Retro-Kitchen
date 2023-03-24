@@ -1,5 +1,7 @@
 let cartNumber = document.getElementById("output") as HTMLSpanElement;
 let header = document.querySelector(".mainHeader") as HTMLHeadElement;
+let footerSection = document.querySelector(".mainFooter") as HTMLHeadElement;
+let cartIconValue = document.getElementById("output") as HTMLDivElement;
 
 window.onload = function () {
   let arrayFromStroage = JSON.parse(localStorage.getItem("CartList") || "[]");
@@ -23,34 +25,43 @@ window.onload = function () {
     <span></span>
     <span></span>
     <ul id="menu">
-      <a href="/src/html/products.html">
-        <li>Alla produkter</li>
-      </a>
-      <a href="/html/products.html">
-        <li>Köksmaskiner</li>
-      </a>
-      <a href="/src/html/products.html">
-        <li>Vitvaror</li>
-      </a>
-      <a href="/src/html/about.html">
-        <li>Om oss</li>
-      </a>
-      <a href="/src/html/contact.html">
-        <li>Kontakt</li>
-      </a>
+        <li><a href="/html/index.html">Hem</a></li>
+        <li><a href="/html/products.html">Produkter</a></li>
+        <li><a href="/html/about.html">Om oss</a></li>
+        <li><a href="/html/contact.html">Kontakt</a></li>
     </ul>
   </div>
 </nav>
 <nav class="desktop">
   <ul class="desktop__list">
     <li><a href="/index.html">Start</a></li>
-    <li><a href="/html/news.html">Nyheter</a></li>
     <li><a href="/html/products.html">Sortiment</a></li>
     <li><a href="/html/about.html">Om oss</a></li>
     <li><a href="/html/contact.html">Kontakt</a></li>
   </ul>
 </nav>
   `;
-
   header.append(navSection);
+
+  let footer = document.createElement("footer") as HTMLElement;
+  footer.innerHTML = `
+<ul className="socialMedia">
+<li>
+  <i className="fa-brands fa-facebook"></i>
+</li>
+<li>
+  <i className="fa-brands fa-instagram"></i>
+</li>
+<li>
+  <i className="fa-brands fa-twitter"></i>
+</li>
+</ul>
+<ul className="adress">
+<li>Retro Kitchen AB</li>
+<li>Drottninggatan 1</li>
+<li>123 45</li>
+<li>Stockholm</li>
+</ul>
+`;
+  footerSection.append(footer);
 };

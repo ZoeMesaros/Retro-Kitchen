@@ -1,36 +1,56 @@
 @use "variables" as v;
 
 @mixin xs {
-    @media (min-width: map-get(v.$breakpoints, "xs")) {
-      @content;
-
-    }
+  @media (min-width: map-get(v.$breakpoints, "xs")) {
+    @content;
+  }
 }
 
 @mixin sm {
-    @media (min-width: map-get(v.$breakpoints, "sm")) {
-      @content;
-
-    }
+  @media (min-width: map-get(v.$breakpoints, "sm")) {
+    @content;
+  }
 }
 
 @mixin md {
-    @media (min-width: map-get(v.$breakpoints, "md")) {
-      @content;
-
-    }
-
+  @media (min-width: map-get(v.$breakpoints, "md")) {
+    @content;
+  }
 }
 @mixin lg {
-    @media (min-width: map-get(v.$breakpoints, "lg")) {
-      @content;
-
-    }
+  @media (min-width: map-get(v.$breakpoints, "lg")) {
+    @content;
+  }
 }
 
 @mixin xl {
-    @media (min-width: map-get(v.$breakpoints, "xl")) {
-      @content;
+  @media (min-width: map-get(v.$breakpoints, "xl")) {
+    @content;
+  }
+}
 
-    }
+@mixin contact-other {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 25vh;
+  background-color: v.$black;
+  color: v.$white;
+  font-size: 25px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+@mixin contact-style {
+  list-style: none;
+  line-height: 1.6;
+  padding-bottom: 30px;
+  @content;
+}
+
+@mixin contact-desktop {
+  padding-top: 20px;
+  font-size: 20px;
+  @content;
 }

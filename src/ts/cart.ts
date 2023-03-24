@@ -1,6 +1,4 @@
 const storedProducts = JSON.parse(localStorage.getItem("CartList") as string);
-
-let cartIconValue = document.getElementById("output") as HTMLDivElement;
 let shoppingCart = document.getElementById("shopping-cart") as HTMLDivElement;
 let totalSum = document.getElementById("total") as HTMLSpanElement;
 

@@ -1,7 +1,7 @@
 @use "variables" as v;
 @use "mixins" as m;
 @use "reset";
-@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Raleway:wght@100&display=swap");
 
 header {
@@ -10,12 +10,12 @@ header {
   text-align: center;
   background-color: #ffffff;
   border-bottom: 4px solid #fdb6fd;
-@include m.md {
-  height: 102px;
-}
-@include m.lg {
-  height: 240px;
-}
+  @include m.md {
+    height: 102px;
+  }
+  @include m.lg {
+    height: 240px;
+  }
   img {
     transform: translateX(-70px);
     width: 140px;
@@ -23,7 +23,6 @@ header {
       transform: translateX(1px);
       width: 140px;
       padding-bottom: 40px;
-      
     }
     @include m.md {
       transform: translateY(2px);
@@ -38,90 +37,88 @@ header {
   }
 }
 
-  .cart {
-    display: inline;
-      position: relative;
-      font-size: 18px;
-      color:#646464;
-      padding-right: 20px;
-      left: 30px;
-      top: 3px;
+.cart {
+  display: inline;
+  position: relative;
+  font-size: 18px;
+  color: #646464;
+  padding-right: 20px;
+  left: 30px;
+  top: 3px;
+  @include m.sm {
+    font-size: 18px;
+    padding-right: 20px;
+    display: block;
+    left: 35%;
+    top: -95px;
+  }
+  @include m.md {
+    font-size: 22px;
+    display: block;
+    padding-right: 20px;
+    left: 40%;
+    top: -92px;
+  }
+  @include m.lg {
+    font-size: 22px;
+    display: block;
+    padding-right: 20px;
+    left: 34%;
+    top: -110px;
+  }
+  a:link {
+    color: #646464;
+  }
+  a:visited {
+    color: #646464;
+  }
+  &__counter {
+    display: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: red;
+    position: relative;
+    font-weight: 600;
+    font-size: 14px;
+    color: rgb(255, 255, 255);
     @include m.sm {
-      font-size: 18px;
-      padding-right: 20px;
-      display: block;
-      left: 35%;
-      top: -95px;
+      display: none;
+      font-size: 12px;
+      transform: translateX(20px) translateY(-1px);
     }
     @include m.md {
-      font-size: 22px;
-      display: block;
-      padding-right: 20px;
-      left: 40%;
-      top: -92px;
+      display: inline-block;
+      font-size: 16px;
+      transform: translateX(48px) translateY(-16px);
     }
     @include m.lg {
-      font-size: 22px;
-      display: block;
-      padding-right: 20px;
-      left: 34%;
-      top: -110px;
-    }
-    a:link {
-      color: #646464;
-    }
-    a:visited {
-      color: #646464;
-    }
-     &__counter {
-      display: none;
-      width: 22px;
-      height: 22px;
-      border-radius: 50%;
-      background-color: red;
-      position: relative;
-      font-weight: 600;
-      font-size: 14px;
-      color: rgb(255, 255, 255);
-      @include m.sm {
-        display: none;
-        font-size: 12px;
-        transform: translateX(20px) translateY(-1px);
-      }
-      @include m.md {
-        display: inline-block;
-        font-size: 16px;
-        transform: translateX(48px) translateY(-16px);
-      }
-      @include m.lg {
-        display: inline-block;
-        transform: translateX(48px) translateY(-16px);
-      }
-    }
-    .cart-text {
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      color: black;
-      font-size: 17px;
-      display: none;
-      transform: translateX(10px);
-      @include m.md {
-        display: block;
-      }
+      display: inline-block;
+      transform: translateX(48px) translateY(-16px);
     }
   }
+  .cart-text {
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    color: black;
+    font-size: 17px;
+    display: none;
+    transform: translateX(10px);
+    @include m.md {
+      display: block;
+    }
+  }
+}
 
-  
+//Mobile
 
-  //Mobile
-
-  body {
-	overflow-x: hidden;
+body {
+  overflow-x: hidden;
 }
 
 a {
-	text-decoration: none !important;
-	color: #232323;
-	transition: color 0.3s ease;
+  text-decoration: none !important;
+  color: #232323;
+  transition: color 0.3s ease;
 }
 
 a:link {
@@ -132,21 +129,20 @@ a:active {
 }
 
 a:visited {
-    color: black;
+  color: black;
 }
 a:hover {
   color: grey;
 }
 
-
 #menuToggle {
-	display: block;
-	position: absolute;
-	top: 35px;
-	right: 25px;
-	z-index: 1;
-	-webkit-user-select: none;
-	user-select: none;
+  display: block;
+  position: absolute;
+  top: 35px;
+  right: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
   @include m.md {
     display: none;
   }
@@ -156,95 +152,94 @@ a:hover {
 }
 
 #menuToggle input {
-	display: block;
-	width: 40px;
-	height: 32px;
-	position: absolute;
-	top: -7px;
-	left: -5px;
-	cursor: pointer;
-	opacity: 0;
-	z-index: 2;
-	-webkit-touch-callout: none;
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+  -webkit-touch-callout: none;
 }
 
 #menuToggle span {
-	display: block;
-	width: 33px;
-	height: 4px;
-	margin-bottom: 5px;
-	position: relative;
-	background: #cdcdcd;
-	border-radius: 3px;
-	z-index: 1;
-	transform-origin: 4px 0px;
-	transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-	background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
-	opacity 0.55s ease;
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+    background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
 
 #menuToggle span:first-child {
-	transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
 }
 
 #menuToggle span:nth-last-child(2) {
-	transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked~span {
-	opacity: 1;
-	transform: rotate(45deg) translate(-2px, -1px);
-	background: #b9b8b8;
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #b9b8b8;
 }
 
-#menuToggle input:checked~span:nth-last-child(3) {
-	opacity: 0;
-	transform: rotate(0deg) scale(0.2, 0.2);
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked~span:nth-last-child(2) {
-	opacity: 1;
-	transform: rotate(-45deg) translate(0, -1px);
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
 }
 
 #menu {
-    position: absolute;
-    line-height: 70px;
-    border-bottom: 4px solid #fdb6fd;
-    width: 240px;
-    margin: 28px 0 0 0;
-    padding: -5px;
-    padding-top: 25px;
-    right: -25px;
-    background: #ffffff;
-    list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    transform-origin: 0% 0%;
-    transform: translate(100%, 0);
-    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  position: absolute;
+  line-height: 70px;
+  border-bottom: 4px solid #fdb6fd;
+  width: 240px;
+  margin: 28px 0 0 0;
+  padding: -5px;
+  padding-top: 25px;
+  right: -25px;
+  background: #ffffff;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
 }
 
 #menu li {
-	padding: 2px 0;
-	font-size: 15px;
-  font-weight:500;
+  padding: 2px 0;
+  font-size: 15px;
+  font-weight: 500;
   border-bottom: 0.5px solid rgb(197, 197, 197);
   a:link {
     color: black;
   }
 }
 
-#menuToggle input:checked~ul {
-	transform: scale(1.0, 1.0);
-	opacity: 1;
+#menuToggle input:checked ~ ul {
+  transform: scale(1, 1);
+  opacity: 1;
 }
 
 //Desktop
 .desktop {
   display: none;
   @include m.md {
-      display: block;
-      transform: translateY(-120%);
+    display: block;
+    transform: translateY(-120%);
   }
   @include m.lg {
     display: block;
@@ -252,24 +247,42 @@ a:hover {
   }
   &__list {
     transform: translateY(-38px);
-    font-family: 'Sora', sans-serif;
+    font-family: "Sora", sans-serif;
     font-size: 20px;
     line-height: -1;
-      list-style: none;
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-      height: 40px;
-      background-color: rgb(255, 255, 255);
-      @include m.md {
-        transform: translateY(-51px);
-        border-bottom: 3px solid #fdb6fd;
-      }
-      @include m.lg {
-        border-bottom: 3px solid #ffffff;
-        padding-top: 15px;
-        transform: translateY(-74px);
-      }
-      }
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 40px;
+    background-color: rgb(255, 255, 255);
+    @include m.md {
+      transform: translateY(-51px);
+      border-bottom: 3px solid #fdb6fd;
+    }
+    @include m.lg {
+      border-bottom: 3px solid #ffffff;
+      padding-top: 15px;
+      transform: translateY(-74px);
+    }
+  }
 }
 
+.mainFooter {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 0.3rem;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  .adress {
+    padding-left: 40%;
+    font-size: 10px;
+    @include m.md {
+      padding-left: 2%;
+      font-size: 10px;
+    }
+  }
+}
